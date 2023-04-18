@@ -11,6 +11,7 @@ import (
 	"strconv"
 
 	"github.com/mcworkaholic/go-scdl/pkg/client"
+	"github.com/mcworkaholic/go-scdl/pkg/theme"
 )
 
 type Id struct {
@@ -52,7 +53,7 @@ func GetPlaylistTracks(track *SoundData, clientId string) []SoundData {
 
 	dec := json.NewDecoder(bytes.NewReader(data))
 	if err := dec.Decode(&sounds); err != nil {
-		log.Println("Error decoding json: ", err)
+		log.Println(theme.Red("Error decoding json: "), theme.Red(err))
 		return nil
 	}
 

@@ -4,8 +4,11 @@ Check if the URL passed is a valid URL by matching a regex.
 package soundcloud
 
 import (
-	"log"
+	"fmt"
+	"os"
 	"regexp"
+
+	"github.com/mcworkaholic/go-scdl/pkg/theme"
 )
 
 // check if the url is a soundcloud url
@@ -25,7 +28,8 @@ func IsValidUrl(url string) bool {
 	pattern := `^(?:https?://)?(?:[^/.\s]+\.)*soundcloud\.com(?:/[^/\s]+)*/?$`
 	matched, err := regexp.MatchString(pattern, url)
 	if err != nil {
-		log.Fatalf("Something went wrong while parsing the URL : %s", err)
+		fmt.Println(theme.Red("Something went wrong while parsing the URL : ") + theme.Red(err))
+		os.Exit(1)
 	}
 
 	if matched {

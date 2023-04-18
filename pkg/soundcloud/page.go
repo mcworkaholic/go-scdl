@@ -39,7 +39,7 @@ func GetClientId() string {
 	url := ""
 	err := godotenv.Load()
 	if err != nil {
-		fmt.Println(theme.Red("Error loading .env file"))
+		fmt.Println(theme.Red("Error loading .env file. Do you have one?"))
 	} else {
 		url = os.Getenv("URL")
 	}
@@ -106,7 +106,7 @@ func GetFormattedDL(track *SoundData, clientId string) []DownloadTrack {
 			mediaUrl := Media{}
 			dec := json.NewDecoder(bytes.NewReader(body))
 			if err := dec.Decode(&mediaUrl); err != nil {
-				log.Println("Error decoding json: ", err)
+				fmt.Println(theme.Red("Error decoding json: "), theme.Red(err))
 				return
 			}
 			tmpTrack := DownloadTrack{
