@@ -13,8 +13,8 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "scdl <url>",
-	Short: "scdl is a simple CLI application to download soundcloud tracks",
+	Use:   "go-scdl <url>",
+	Short: "go-scdl is a simple CLI application to download soundcloud tracks",
 	Long: `A blazingly fast go program to download tracks from soundcloud 
 		using just the URL, with some cool features and beautiful UI.
 	`,
