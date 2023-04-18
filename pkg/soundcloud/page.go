@@ -15,6 +15,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"github.com/joho/godotenv"
 	"github.com/mcworkaholic/go-scdl/pkg/client"
+	"github.com/mcworkaholic/go-scdl/pkg/theme"
 )
 
 var Sound *SoundData
@@ -38,16 +39,16 @@ func GetClientId() string {
 	url := ""
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("Error loading .env file")
+		fmt.Println(theme.Red("Error loading .env file"))
 	} else {
 		url = os.Getenv("URL")
 	}
 
 	statusCode, bodyData, err := client.Get(url)
 	if statusCode != 200 {
-		log.Fatalf("Bad URL for Client ID. Check your .env file.")
+		fmt.Println(theme.Red("Bad URL for Client ID. Check your .env file."), theme.Red(url))
 	} else if err != nil {
-		log.Fatalf("An Error : %s occurred while requesting : %s", err, url)
+		fmt.Printf("An Error : %s occurred while requesting : %s", err, url)
 	}
 	doc, err := goquery.NewDocumentFromReader(bytes.NewReader(bodyData))
 
