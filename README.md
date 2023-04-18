@@ -41,7 +41,7 @@ Make sure to read the help menu.
 
 ```
 Usage:
-  scdl <url> [flags]
+  go-scdl <url> [flags]
 
 Flags:
   -b, --best                   Download with the best available quality.
