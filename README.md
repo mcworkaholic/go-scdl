@@ -1,15 +1,18 @@
 <p align="center">
     <img src="assets/go-sound.png"alt="goandsoundcloud">
-</p>
+</p>  
+
 
 <h1 align="center">
-go-scdl
+go-scdl 
+</h1>
+
+<h3 align="center">
 
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 ![Sound Cloud](https://img.shields.io/badge/sound%20cloud-FF5500?style=for-the-badge&logo=soundcloud&logoColor=white)
 
-</h1>
-
+</h3>
 A simple CLI app written in GO used to download sound-tracks from soundcloud with a nice UI and some cool features like downloading with multiple formats/qualities and search.
 
 # Overview
