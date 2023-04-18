@@ -46,9 +46,11 @@ func GetClientId() string {
 
 	statusCode, bodyData, err := client.Get(url)
 	if statusCode != 200 {
-		fmt.Println(theme.Red("Bad URL for Client ID. Check your .env file."), theme.Red(url))
+		fmt.Println(theme.Red("Bad URL for Client ID. Check your .env file. -->"), theme.Red(url))
+		os.Exit(1)
 	} else if err != nil {
 		fmt.Printf("An Error : %s occurred while requesting : %s", err, url)
+		os.Exit(1)
 	}
 	doc, err := goquery.NewDocumentFromReader(bytes.NewReader(bodyData))
 
