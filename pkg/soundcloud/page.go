@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -67,7 +67,7 @@ func GetClientId() string {
 	}
 
 	// reading the body
-	bodyData, err = ioutil.ReadAll(resp.Body)
+	bodyData, err = io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)
 	}

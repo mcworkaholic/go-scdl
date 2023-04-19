@@ -6,7 +6,7 @@ package soundcloud
 import (
 	"bytes"
 	"encoding/json"
-	"log"
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -53,7 +53,7 @@ func GetPlaylistTracks(track *SoundData, clientId string) []SoundData {
 
 	dec := json.NewDecoder(bytes.NewReader(data))
 	if err := dec.Decode(&sounds); err != nil {
-		log.Println(theme.Red("Error decoding json: "), theme.Red(err))
+		fmt.Println(theme.Red("Error decoding json: "), theme.Red(err))
 		return nil
 	}
 

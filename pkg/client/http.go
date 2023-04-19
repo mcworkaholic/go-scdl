@@ -4,7 +4,7 @@ Modify the http package to allow easy calls
 package client
 
 import (
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"time"
@@ -51,7 +51,7 @@ func Get(url string) (int, []byte, error) {
 	}
 
 	// read the response body
-	bodyBytes, err := ioutil.ReadAll(resp.Body)
+	bodyBytes, err := io.ReadAll(resp.Body)
 
 	defer resp.Body.Close()
 

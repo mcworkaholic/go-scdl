@@ -33,6 +33,9 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 
 	// setting metadata
 	tag.SetTitle(track.SoundData.Title)
+	// TODO:
+	//tag.SetArtist()
+	//tag.SetAlbum()
 	tag.SetGenre(track.SoundData.Genre)
 	tag.SetYear(track.SoundData.CreatedAt)
 
