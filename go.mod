@@ -13,6 +13,8 @@ require (
 	github.com/spf13/pflag v1.0.5
 )
 
+require github.com/hectane/go-acl v0.0.0-20230122075934-ca0b05cb1adb // indirect
+
 require (
 	github.com/andybalholm/cascadia v1.3.1 // indirect
 	github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e // indirect
