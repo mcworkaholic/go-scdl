@@ -45,7 +45,10 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 
 		apiUrl := soundcloud.GetTrackInfoAPIUrl(url, clientId)
 		soundData = soundcloud.GetSoundMetaData(apiUrl, url, clientId)
-		fmt.Println(soundData)
+		fmt.Print(soundData.Title)
+		fmt.Print(soundData.CreatedAt)
+		fmt.Print(soundData.Genre)
+		fmt.Print(soundData.Duration)
 		if soundData == nil {
 			fmt.Printf("%s URL : %s \n", theme.Red("[+]"), theme.Magenta(url))
 			fmt.Println(theme.Yellow("URL doesn't return a valid track. Is the track publicly accessible?"))
