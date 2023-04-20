@@ -27,8 +27,12 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 		return
 	}
 
-	clientId := soundcloud.GetClientId()
+	clientId := soundcloud.GetClientId(url)
 
+	if clientId == "" {
+		fmt.Println("Something went wrong while getting the Client Id!")
+		return
+	}
 	// --search-and-download
 	if search {
 		keyword := getUserSearch()

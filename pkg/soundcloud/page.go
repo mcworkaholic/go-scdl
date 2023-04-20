@@ -13,7 +13,6 @@ import (
 	"sync"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/joho/godotenv"
 	"github.com/mcworkaholic/go-scdl/pkg/client"
 	"github.com/mcworkaholic/go-scdl/pkg/theme"
 )
@@ -35,23 +34,22 @@ func GetSoundMetaData(apiUrl string, url string, clientId string) *SoundData {
 	return Sound
 }
 
-func GetClientId() string {
-	url := ""
-	err := godotenv.Load()
-	if err != nil {
-		fmt.Println(theme.Red("Error loading .env file. Do you have one?"))
-	} else {
-		url = os.Getenv("URL")
+func GetClientId(url string) string {
+
+	if url == "" {
+		// the best url ever, if you find this then you're so cool :D I love you :DDD
+		url = "https://soundcloud.com/ahmed-yehia0"
 	}
 
 	statusCode, bodyData, err := client.Get(url)
 	if statusCode != 200 {
-		fmt.Println(theme.Red("Bad URL for Client ID. Check your .env file. -->"), theme.Red(url))
+		fmt.Println(theme.Red("Bad URL for Client ID. "), theme.Red(url))
 		os.Exit(1)
 	} else if err != nil {
 		fmt.Printf("An Error : %s occurred while requesting : %s", err, url)
 		os.Exit(1)
 	}
+
 	doc, err := goquery.NewDocumentFromReader(bytes.NewReader(bodyData))
 
 	// find the last src under the body
