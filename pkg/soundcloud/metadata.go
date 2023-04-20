@@ -26,7 +26,7 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 		imgBytes = data
 	}
 
-	err := acl.Chmod(filePath, 0666)
+	err := acl.Chmod(filePath+"-id3v2", 0666)
 	if err != nil {
 		panic(err)
 	}
