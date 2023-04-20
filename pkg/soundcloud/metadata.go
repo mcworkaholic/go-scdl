@@ -6,7 +6,6 @@ import (
 	"strings"
 
 	"github.com/bogem/id3v2"
-	"github.com/hectane/go-acl"
 	"github.com/mcworkaholic/go-scdl/pkg/client"
 )
 
@@ -26,10 +25,6 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 		imgBytes = data
 	}
 
-	err := acl.Chmod(filePath+"-id3v2", 0666)
-	if err != nil {
-		panic(err)
-	}
 	tag, err := id3v2.Open(filePath, id3v2.Options{Parse: true})
 	if err != nil {
 		return err

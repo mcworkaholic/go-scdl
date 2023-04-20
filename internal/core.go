@@ -94,12 +94,13 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 		return
 	}
 
-	fmt.Printf("\n%s Track saved to : %s\n", theme.Green("[-]"), theme.Magenta(filePath))
-
-	err := soundcloud.AddMetadata(track, strings.Replace(filePath, "/", "\\", -1))
+	err := soundcloud.AddMetadata(track, filePath)
 	if err != nil {
 		fmt.Println()
 		fmt.Println(theme.Red("An error occurred while adding tags to the track : "))
 		fmt.Println(theme.Red(err))
 	}
+
+	fmt.Printf("\n%s Track saved to : %s\n", theme.Green("[-]"), theme.Magenta(filePath))
+
 }
