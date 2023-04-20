@@ -40,7 +40,7 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 	tag.SetYear(track.SoundData.CreatedAt)
 
 	// extracting the usr
-	artistName := strings.Split(track.SoundData.PermalinkUrl, "/")
+	artistName := strings.Split(track.SoundData.PermalinkUrl, "\\")
 	tag.SetArtist(artistName[3])
 
 	if imgBytes != nil {
