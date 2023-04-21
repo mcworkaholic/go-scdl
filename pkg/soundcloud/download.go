@@ -116,7 +116,7 @@ func validateDownload(dlpath string, trackName string) string {
 // Download download the track
 func Download(track DownloadTrack, dlpath string) string {
 	// TODO: Prompt Y/N if the file exists and rename by adding _<random/date>.<ext>
-	trackName := track.SoundData.Title + "[" + track.Quality + "]." + track.Ext
+	trackName := track.SoundData.Title + "." + track.Ext
 	path := validateDownload(dlpath, trackName)
 
 	// check if the track is hls
