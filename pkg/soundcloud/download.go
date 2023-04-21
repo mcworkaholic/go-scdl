@@ -86,7 +86,7 @@ func getSegments(body io.Reader) []string {
 // using the goroutine to download each segment concurrently and wait till all finished
 func DownloadM3u8(filepath string, dlbar *bar.ProgressBar, segments []string) error {
 
-	file, _ := os.OpenFile(filepath, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
+	file, _ := os.OpenFile(filepath, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0666)
 
 	// the go routine now
 	var wg sync.WaitGroup
@@ -145,7 +145,7 @@ func Download(track DownloadTrack, dlpath string) string {
 	defer resp.Body.Close()
 
 	// check if the file exists
-	f, _ := os.OpenFile(path, os.O_CREATE|os.O_WRONLY, 0644)
+	f, _ := os.OpenFile(path, os.O_CREATE|os.O_WRONLY, 0666)
 	defer f.Close()
 
 	bar := bar.DefaultBytes(
