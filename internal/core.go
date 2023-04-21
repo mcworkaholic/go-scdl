@@ -23,7 +23,14 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 
 	url := ""
 	if len(args) > 0 {
+		var urls []string
+		for _, arg := range args {
+			if strings.HasPrefix(arg, "https") {
+				urls = append(urls, arg)
+			}
+		}
 		url = args[0]
+		fmt.Println(urls)
 	}
 
 	if url != "" && !initValidations(url) {
