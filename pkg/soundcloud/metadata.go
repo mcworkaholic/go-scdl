@@ -34,7 +34,7 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 	defer func(tag *id3v2.Tag) {
 		err := tag.Close()
 		if err != nil {
-			log.Fatalln("\n" + theme.Red(err))
+			log.Fatalln("\n" + "Error on  " + theme.Red(err))
 		}
 	}(tag)
 
@@ -61,7 +61,7 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 		)
 	}
 	if err = tag.Save(); err != nil {
-		return err
+		log.Fatalln("\n" + "Error on  " + theme.Red(err))
 	}
 	return nil
 
