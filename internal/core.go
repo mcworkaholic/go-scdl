@@ -2,8 +2,11 @@ package internal
 
 import (
 	"fmt"
+	"runtime"
 	"strings"
 	"sync"
+
+	"path/filepath"
 
 	"github.com/mcworkaholic/go-scdl/pkg/soundcloud"
 	"github.com/mcworkaholic/go-scdl/pkg/theme"
@@ -84,12 +87,14 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 	}
 
 	downloadTracks := soundcloud.GetFormattedDL(soundData, clientId)
-
+	os := runtime.GOOS
+	filePath := ""
 	track := getTrack(downloadTracks, bestQuality)
-	filePath := soundcloud.Download(track, downloadPath)
-
-	// add tags
-	if filePath == "" {
+	if os == "windows" {
+		filePath = soundcloud.Download(track, filepath.FromSlash(downloadPath))
+	} else if os == "linux" {
+		filePath = soundcloud.Download(track, downloadPath)
+	} else if filePath == "" {
 		fmt.Printf("\n%s Track was already saved to : %s\n", theme.Green("[-]"), theme.Magenta(downloadPath))
 		return
 	}
