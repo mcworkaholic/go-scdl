@@ -8,6 +8,7 @@ import (
 
 	"github.com/bogem/id3v2"
 	"github.com/mcworkaholic/go-scdl/pkg/client"
+	"github.com/mcworkaholic/go-scdl/pkg/theme"
 )
 
 func AddMetadata(track DownloadTrack, filePath string) error {
@@ -33,7 +34,7 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 	defer func(tag *id3v2.Tag) {
 		err := tag.Close()
 		if err != nil {
-			log.Fatalln(err)
+			log.Fatalln("\n" + theme.Red(err))
 		}
 	}(tag)
 
