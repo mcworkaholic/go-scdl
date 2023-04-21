@@ -1,7 +1,8 @@
-// adding tags to the track after downloading it.
+// Package soundcloud adding tags to the track after downloading it.
 package soundcloud
 
 import (
+	"log"
 	"net/http"
 	"strings"
 
@@ -29,7 +30,12 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 	if err != nil {
 		return err
 	}
-	defer tag.Close()
+	defer func(tag *id3v2.Tag) {
+		err := tag.Close()
+		if err != nil {
+			log.Fatalln(err)
+		}
+	}(tag)
 
 	// setting metadata
 	tag.SetTitle(track.SoundData.Title)

@@ -38,7 +38,10 @@ var rootCmd = &cobra.Command{
 			if len(args) != 0 {
 				if strings.HasPrefix(args[0], "https") && Search {
 					fmt.Printf("Can't use/pass a %s with --%s flag\n\n", theme.Green("<url>"), theme.Red(f.Name))
-					cmd.Usage()
+					err := cmd.Usage()
+					if err != nil {
+						return
+					}
 					os.Exit(0)
 				}
 			}

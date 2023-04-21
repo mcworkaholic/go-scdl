@@ -1,4 +1,4 @@
-// download the soundcloud tracks
+// Package soundcloud download the soundcloud tracks
 package soundcloud
 
 import (
@@ -83,10 +83,10 @@ func getSegments(body io.Reader) []string {
 	return segments
 }
 
-// using the goroutine to download each segment concurrently and wait till all finished
+// DownloadM3u8 using the goroutine to download each segment concurrently and wait till all finished
 func DownloadM3u8(filepath string, dlbar *bar.ProgressBar, segments []string) error {
 
-	file, _ := os.OpenFile(filepath, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0666)
+	file, _ := os.OpenFile(filepath, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
 
 	// the go routine now
 	var wg sync.WaitGroup
@@ -113,10 +113,10 @@ func validateDownload(dlpath string, trackName string) string {
 	return path
 }
 
-// download the track
+// Download download the track
 func Download(track DownloadTrack, dlpath string) string {
 	// TODO: Prompt Y/N if the file exists and rename by adding _<random/date>.<ext>
-	trackName := track.SoundData.Title + "." + track.Ext
+	trackName := track.SoundData.Title + "[" + track.Quality + "]." + track.Ext
 	path := validateDownload(dlpath, trackName)
 
 	// check if the track is hls
@@ -145,7 +145,7 @@ func Download(track DownloadTrack, dlpath string) string {
 	defer resp.Body.Close()
 
 	// check if the file exists
-	f, _ := os.OpenFile(path, os.O_CREATE|os.O_WRONLY, 0666)
+	f, _ := os.OpenFile(path, os.O_CREATE|os.O_WRONLY, 0644)
 	defer f.Close()
 
 	bar := bar.DefaultBytes(
