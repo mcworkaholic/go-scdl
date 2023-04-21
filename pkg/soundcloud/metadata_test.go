@@ -55,7 +55,7 @@ func TestAddMetaData(t *testing.T) {
 	defer tag.Close()
 
 	if tag.Genre() != downloadTrack.SoundData.Genre {
-		t.Errorf("Expected Genere to be %s, got %s", downloadTrack.SoundData.Genre, tag.Genre())
+		t.Errorf("Expected Genre to be %s, got %s", downloadTrack.SoundData.Genre, tag.Genre())
 	}
 
 	if tag.Title() != downloadTrack.SoundData.Title {

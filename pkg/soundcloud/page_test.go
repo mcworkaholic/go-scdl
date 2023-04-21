@@ -39,7 +39,7 @@ func TestGetClientId(t *testing.T) {
 	defer testServer.Close()
 
 	// FIXME: change test to reflect changes to function GetClientId()
-	clientId := soundcloud.GetClientId()
+	clientId := soundcloud.GetClientId(trackUrl)
 
 	if clientId != expectedData {
 		t.Errorf("Something wen't wrong, expected clientId to be %s", expectedData)
