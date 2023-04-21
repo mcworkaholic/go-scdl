@@ -61,7 +61,7 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 		)
 	}
 	if err = tag.Save(); err != nil {
-		log.Fatalln("\n" + "Error on  " + theme.Red(err))
+		log.Fatalln("\n" + theme.Red("Error on ") + theme.Red(err))
 	}
 	return nil
 
