@@ -4,6 +4,8 @@ package soundcloud
 import (
 	"log"
 	"net/http"
+	"path/filepath"
+	"runtime"
 	"strings"
 
 	"github.com/bogem/id3v2"
@@ -14,6 +16,7 @@ import (
 func AddMetadata(track DownloadTrack, filePath string) error {
 	t500 := "t500x500" // for getting a higher res img
 	imgBytes := make([]byte, 0)
+	os := runtime.GOOS
 
 	// check for artist thing
 	if track.SoundData.ArtworkUrl != "" {
@@ -27,7 +30,15 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 		imgBytes = data
 	}
 
-	tag, err := id3v2.Open(filePath, id3v2.Options{Parse: true})
+	var tag *id3v2.Tag
+	var err error
+	switch os {
+	case "windows":
+		windowsPath := filepath.FromSlash(filePath)
+		tag, err = id3v2.Open(windowsPath, id3v2.Options{Parse: true})
+	default:
+		tag, err = id3v2.Open(filePath, id3v2.Options{Parse: true})
+	}
 	if err != nil {
 		return err
 	}
@@ -64,5 +75,4 @@ func AddMetadata(track DownloadTrack, filePath string) error {
 		log.Fatalln("\n" + theme.Red("id3v2 save error: ") + theme.Red(err))
 	}
 	return nil
-
 }
