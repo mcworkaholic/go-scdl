@@ -2,7 +2,6 @@ package soundcloud_test
 
 import (
 	"bytes"
-	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
 	"os"
@@ -42,7 +41,7 @@ func TestDownload(t *testing.T) {
 	expectedPath := soundcloud.Download(downloadTrack, path)
 
 	// read the downloaded file
-	file, err := ioutil.ReadFile(expectedPath)
+	file, err := os.ReadFile(expectedPath)
 	if err != nil {
 		t.Errorf("An error occurred while reading the track, error : %s", err)
 	}
@@ -146,7 +145,7 @@ func TestDownloadM3u8(t *testing.T) {
 	soundcloud.DownloadM3u8(path, nil, segmentURIs)
 
 	// read the downloaded file
-	file, err := ioutil.ReadFile(path)
+	file, err := os.ReadFile(path)
 	if err != nil {
 		t.Errorf("An error occurred while reading the track, error : %s", err)
 	}
