@@ -1,9 +1,9 @@
 package soundcloud_test
 
 import (
-	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"path/filepath"
 	"reflect"
 	"testing"
@@ -19,7 +19,7 @@ var (
 // read the html file
 func readTestFile(testfile string) []byte {
 	testPath := "../../testdata/"
-	content, err := ioutil.ReadFile(filepath.Join(testPath, testfile))
+	content, err := os.ReadFile(filepath.Join(testPath, testfile))
 
 	if err != nil {
 		return nil

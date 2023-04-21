@@ -51,6 +51,10 @@ func GetClientId(url string) string {
 	}
 
 	doc, err := goquery.NewDocumentFromReader(bytes.NewReader(bodyData))
+	if err != nil {
+		fmt.Printf("failed to parse HTML: %s", err)
+		os.Exit(1)
+	}
 
 	// find the last src under the body
 	apiurl, exists := doc.Find("body > script").Last().Attr("src")
