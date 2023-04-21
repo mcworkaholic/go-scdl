@@ -94,7 +94,9 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 		filePath = soundcloud.Download(track, filepath.FromSlash(downloadPath))
 	} else if os == "linux" {
 		filePath = soundcloud.Download(track, downloadPath)
-	} else if filePath == "" {
+	}
+
+	if filePath == "" {
 		fmt.Printf("\n%s Track was already saved to : %s\n", theme.Green("[-]"), theme.Magenta(downloadPath))
 		return
 	}
