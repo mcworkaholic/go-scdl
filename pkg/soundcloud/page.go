@@ -31,6 +31,11 @@ func GetSoundMetaData(apiUrl string, url string, clientId string) *SoundData {
 
 	json.Unmarshal(body, &Sound)
 
+	err = os.WriteFile("download-cache.json", body, 0644)
+	if err != nil {
+		panic(err)
+	}
+
 	return Sound
 }
 
