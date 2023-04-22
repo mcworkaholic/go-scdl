@@ -82,7 +82,7 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 						if fp == "" {
 							return
 						}
-						soundcloud.AddMetadata(t, fp)
+						//soundcloud.AddMetadata(t, fp)
 
 					}(dlT)
 				}
@@ -107,10 +107,6 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 						fmt.Printf("\n%s Track was already saved to path: %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(path.Join(downloadPath, soundData.Title+"."+track.Ext))))
 						return
 					}
-					err := soundcloud.AddMetadata(track, filePath)
-					if err != nil {
-						fmt.Println("\n" + theme.Red("An error occurred while adding tags to the track : "+"\n"+theme.Red(err)))
-					}
 					fmt.Printf("\n%s Track saved to path: %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(path.Join(downloadPath, soundData.Title+"."+track.Ext))))
 				}()
 			}
@@ -123,6 +119,10 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 		_, err = file.Write([]byte("]"))
 		if err != nil {
 			panic(err)
+		}
+		err = soundcloud.AddMetadata()
+		if err != nil {
+			fmt.Println("\n" + theme.Red("An error occurred while adding tags to the track : "+"\n"+theme.Red(err)))
 		}
 	}
 }
