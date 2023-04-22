@@ -104,14 +104,14 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 				go func() {
 					fp := soundcloud.Download(track, filePath)
 					if fp == "" {
-						fmt.Printf("\n%s Track was already saved to : %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(path.Join(downloadPath, soundData.Title+"."+track.Ext))))
+						fmt.Printf("\n%s Track was already saved to path: %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(path.Join(downloadPath, soundData.Title+"."+track.Ext))))
 						return
 					}
 					// err := soundcloud.AddMetadata(track, filePath)
 					// if err != nil {
 					//     fmt.Println("\n" + theme.Red("An error occurred while adding tags to the track : "+"\n"+theme.Red(err)))
 					// }
-					fmt.Printf("\n%s Track saved to : %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(path.Join(downloadPath, soundData.Title+"."+track.Ext))))
+					fmt.Printf("\n%s Track saved to path: %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(path.Join(downloadPath, soundData.Title+"."+track.Ext))))
 				}()
 			}
 		}

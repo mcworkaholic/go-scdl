@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"path"
+	"path/filepath"
 	"regexp"
 	"strings"
 	"sync"
@@ -36,8 +37,7 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 	}
 
 	// Set the file path
-	soundData.Filepath = path.Join(filePath, soundData.Title+".ogg")
-
+	soundData.Filepath = filepath.FromSlash(path.Join(filePath, soundData.Title+".ogg"))
 	// Create or open the file for appending
 	file, err := os.OpenFile(path.Join(".\\json", "download-cache.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
