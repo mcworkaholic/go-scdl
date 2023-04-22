@@ -23,19 +23,56 @@ var Sound *SoundData
 // extract some meta data under : window.__sc_hydration
 // check if the track exists and open to public
 func GetSoundMetaData(apiUrl string, url string, clientId string) *SoundData {
+
 	statusCode, body, err := client.Get(apiUrl)
+
 	if err != nil || statusCode != http.StatusOK {
 		return nil
 	}
+
 	json.Unmarshal(body, &Sound)
 
-	// Append json output to file
-	f, err := os.OpenFile(path.Join(".\\json", "download-cache.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	// Create or open the file for appending
+	file, err := os.OpenFile(path.Join(".\\json", "download-cache.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		panic(err)
 	}
-	defer f.Close()
-	_, err = f.Write(body)
+
+	// If file is empty or doesn't contain a valid JSON array, add opening bracket
+	fi, _ := file.Stat()
+	if fi.Size() == 0 {
+		_, err = file.Write([]byte("["))
+		if err != nil {
+			panic(err)
+		}
+	} else {
+		// Check if the file ends with a closing bracket, indicating a valid JSON array
+		_, err = file.Seek(-1, io.SeekEnd)
+		if err != nil {
+			panic(err)
+		}
+		b := make([]byte, 1)
+		_, err = file.Read(b)
+		if err != nil {
+			panic(err)
+		}
+		if string(b) != "]" {
+			// If the file doesn't end with a closing bracket, add a comma separator
+			_, err = file.Write([]byte(","))
+			if err != nil {
+				panic(err)
+			}
+		}
+	}
+
+	// Write JSON output to file
+	_, err = file.Write(body)
+	if err != nil {
+		panic(err)
+	}
+
+	// Close the file
+	err = file.Close()
 	if err != nil {
 		panic(err)
 	}
