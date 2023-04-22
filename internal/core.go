@@ -4,11 +4,10 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"path/filepath"
 	"runtime"
 	"strings"
 	"sync"
-
-	"path/filepath"
 
 	"github.com/mcworkaholic/go-scdl/pkg/soundcloud"
 	"github.com/mcworkaholic/go-scdl/pkg/theme"
@@ -112,7 +111,7 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 					// if err != nil {
 					//     fmt.Println("\n" + theme.Red("An error occurred while adding tags to the track : "+"\n"+theme.Red(err)))
 					// }
-					fmt.Printf("\n%s Track saved to : %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(fp)))
+					fmt.Printf("\n%s Track saved to : %s\n", theme.Green("[-]"), theme.Magenta(fp))
 				}()
 			}
 		}
