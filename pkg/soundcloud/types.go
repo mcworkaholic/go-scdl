@@ -14,6 +14,7 @@ type Format struct {
 type SoundData struct {
 	Id           int64      `json:"id"`
 	Filepath     string     `json:"file_path"`
+	Filename     string     `json:"file_name"`
 	Title        string     `json:"title"`
 	CreatedAt    string     `json:"created_at"`
 	Duration     int64      `json:"duration"`
