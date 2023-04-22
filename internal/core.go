@@ -20,31 +20,31 @@ var (
 )
 
 func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
-
-	url := ""
-	urls := ""
+	urlString := ""
+	urls := []string{}
 	if len(args) > 0 {
-		var urls []string
 		for _, arg := range args {
 			if strings.HasPrefix(arg, "https") {
 				urls = append(urls, arg)
 			}
 		}
-		url = urls[0]
+		if len(urls) > 0 {
+			urlString = urls[0]
+		}
 		fmt.Println(urls)
 	}
 
-	if url != "" && !initValidations(url) {
+	if urlString != "" && !initValidations(urlString) {
 		return
 	}
 
-	clientId := soundcloud.GetClientId(url)
+	clientId := soundcloud.GetClientId(urlString)
 
 	if clientId == "" {
 		fmt.Println("Something went wrong while getting the Client Id!")
 		return
 	}
-	// --search-and-download
+
 	if search {
 		keyword := getUserSearch()
 		apiUrl := soundcloud.GetSeachAPIUrl(keyword, SearchLimit, offset, clientId)
@@ -53,16 +53,15 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 		// select one to download
 		soundData = selectSearchUrl(searchResult)
 	} else {
-		for i := 0; i < len(urls); i++ {
-			apiUrl := soundcloud.GetTrackInfoAPIUrl(string(urls[i]), clientId)
-			soundData = soundcloud.GetSoundMetaData(apiUrl, string(urls[i]), clientId)
+		for _, url := range urls {
+			apiUrl := soundcloud.GetTrackInfoAPIUrl(url, clientId)
+			soundData := soundcloud.GetSoundMetaData(apiUrl, url, clientId)
 			if soundData == nil {
-				fmt.Printf("%s URL : %s \n", theme.Red("[+]"), theme.Magenta(urls[i]))
+				fmt.Printf("%s URL : %s \n", theme.Red("[+]"), theme.Magenta(url))
 				fmt.Println(theme.Yellow("URL doesn't return a valid track. Is the track publicly accessible?"))
-				return
+				continue
 			}
 			fmt.Printf("%s %s found. Title : %s - Duration : %s\n", theme.Green("[+]"), strings.Title(soundData.Kind), theme.Magenta(soundData.Title), theme.Magenta(theme.FormatTime(soundData.Duration)))
-
 			// check if the url is a playlist
 			if soundData.Kind == "playlist" {
 				var wg sync.WaitGroup
@@ -111,9 +110,7 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 			// if err != nil {
 			// 	fmt.Println("\n" + theme.Red("An error occurred while adding tags to the track : "+"\n"+theme.Red(err)))
 			// }
-
 			fmt.Printf("\n%s Track saved to : %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(filePath)))
-
 		}
 	}
 }
