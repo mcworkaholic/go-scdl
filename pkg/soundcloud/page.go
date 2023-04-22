@@ -62,8 +62,8 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 	}
 
 	// Set the file path
-	trackName := soundData.Title + ".ogg" // TODO: do not hardcode this here
-	soundData.Filepath = path.Join(filePath, trackName)
+	//trackName := soundData.Title + ".ogg" // TODO: do not hardcode this here
+	soundData.Filepath = filePath
 
 	// Write JSON output to file
 	_, err = file.Write(soundDataBytes)
