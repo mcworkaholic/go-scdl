@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path"
 	"regexp"
 	"strings"
 	"sync"
@@ -31,7 +32,8 @@ func GetSoundMetaData(apiUrl string, url string, clientId string) *SoundData {
 
 	json.Unmarshal(body, &Sound)
 
-	err = os.WriteFile("download-cache.json", body, 0644)
+	// Write json output to file
+	err = os.WriteFile(path.Join(".\\json", "download-cache.json"), body, 0666)
 	if err != nil {
 		panic(err)
 	}
