@@ -2,6 +2,8 @@ package internal
 
 import (
 	"fmt"
+	"os"
+	"path"
 	"runtime"
 	"strings"
 	"sync"
@@ -113,6 +115,15 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 					fmt.Printf("\n%s Track saved to : %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(fp)))
 				}()
 			}
+		}
+		// Create or open the file for appending
+		file, err := os.OpenFile(path.Join(".\\json", "download-cache.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+		if err != nil {
+			panic(err)
+		}
+		_, err = file.Write([]byte("]"))
+		if err != nil {
+			panic(err)
 		}
 	}
 }
