@@ -22,6 +22,7 @@ import (
 var Sound *SoundData
 
 // extract some meta data under : window.__sc_hydration
+// write to JSON file
 // check if the track exists and open to public
 func GetSoundMetaData(filePath string, apiUrl string, url string, clientId string) *SoundData {
 	statusCode, body, err := client.Get(apiUrl)
