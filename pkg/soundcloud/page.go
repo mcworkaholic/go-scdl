@@ -39,6 +39,24 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 	// Set the file path & name
 	soundData.Filepath = filepath.FromSlash(path.Join(filePath, soundData.Title+".ogg"))
 	soundData.Filename = soundData.Title + ".ogg"
+	url = soundData.PermalinkUrl
+	// Find the index of the last "/" and the second to last "/"
+	lastSlashIndex := strings.LastIndex(url, "/")
+	secondToLastSlashIndex := strings.LastIndex(url[:lastSlashIndex], "/")
+
+	// Extract the text between the slashes
+	textBetweenSlashes := url[secondToLastSlashIndex+1 : lastSlashIndex]
+
+	// Split the text into words and capitalize each one
+	words := strings.Split(textBetweenSlashes, "_")
+	words = strings.Split(words[0], "-") // in case the delimiter is "-"
+	for i, word := range words {
+		words[i] = strings.Title(word)
+	}
+
+	// Join the words back into a single string
+	formattedUsername := strings.Join(words, " ")
+	soundData.Username = formattedUsername
 
 	// Create or open the file for appending
 	file, err := os.OpenFile(path.Join(".\\json", "download-cache.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
