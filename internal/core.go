@@ -31,7 +31,6 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 		if len(urls) > 0 {
 			urlString = urls[0]
 		}
-		fmt.Println(urls)
 	}
 
 	if urlString != "" && !initValidations(urlString) {
@@ -90,27 +89,29 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 
 				fmt.Printf("\n%s Playlist saved to : %s\n", theme.Green("[-]"), theme.Magenta(downloadPath))
 				return
+			} else if soundData.Kind != "playlist" {
+				downloadTracks := soundcloud.GetFormattedDL(soundData, clientId)
+				os := runtime.GOOS
+				filePath := ""
+				track := getTrack(downloadTracks, bestQuality)
+				if os == "windows" {
+					filePath = soundcloud.Download(track, filepath.FromSlash(downloadPath))
+				} else if os == "linux" {
+					filePath = soundcloud.Download(track, downloadPath)
+				}
+				go func() {
+					soundcloud.Download(track, filePath)
+					if filePath == "" {
+						fmt.Printf("\n%s Track was already saved to : %s\n", theme.Green("[-]"), theme.Magenta(downloadPath))
+						return
+					}
+					// err := soundcloud.AddMetadata(track, filePath)
+					// if err != nil {
+					// 	fmt.Println("\n" + theme.Red("An error occurred while adding tags to the track : "+"\n"+theme.Red(err)))
+					// }
+					fmt.Printf("\n%s Track saved to : %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(filePath)))
+				}()
 			}
-			downloadTracks := soundcloud.GetFormattedDL(soundData, clientId)
-			os := runtime.GOOS
-			filePath := ""
-			track := getTrack(downloadTracks, bestQuality)
-			if os == "windows" {
-				filePath = soundcloud.Download(track, filepath.FromSlash(downloadPath))
-			} else if os == "linux" {
-				filePath = soundcloud.Download(track, downloadPath)
-			}
-
-			if filePath == "" {
-				fmt.Printf("\n%s Track was already saved to : %s\n", theme.Green("[-]"), theme.Magenta(downloadPath))
-				return
-			}
-
-			// err := soundcloud.AddMetadata(track, filePath)
-			// if err != nil {
-			// 	fmt.Println("\n" + theme.Red("An error occurred while adding tags to the track : "+"\n"+theme.Red(err)))
-			// }
-			fmt.Printf("\n%s Track saved to : %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(filePath)))
 		}
 	}
 }
