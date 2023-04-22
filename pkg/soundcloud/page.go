@@ -35,6 +35,8 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 		panic(err)
 	}
 
+	soundData.Filepath = path.Join(filePath, soundData.Title+".ogg")
+
 	// Create or open the file for appending
 	file, err := os.OpenFile(path.Join(".\\json", "download-cache.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
@@ -63,7 +65,7 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 
 	// Set the file path
 	//trackName := soundData.Title + ".ogg" // TODO: do not hardcode this here
-	soundData.Filepath = filePath
+	//soundData.Filepath = filePath
 
 	// Write JSON output to file
 	_, err = file.Write(soundDataBytes)
