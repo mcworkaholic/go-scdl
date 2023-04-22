@@ -6,9 +6,7 @@ from datetime import datetime
 download_cache = ".\\json\\download-cache.json"
 def load(filepath):
     return music_tag.load_file(filepath)
-
-   
-
+ 
 # Load the JSON file
 with open(download_cache, 'r') as f:
     data = json.load(f)
@@ -32,9 +30,8 @@ with open(download_cache, 'r') as f:
         f['genre'] = obj['genre']
         # Parse the string into a datetime object
         dt = datetime.strptime(obj['created_at'], "%Y-%m-%dT%H:%M:%SZ")
-        f.remove_tag('year')
         f['year'] = dt.strftime("%Y-%m-%d")
         f.save()
-        print(title, length, codec, channels, bitspersample, samplerate, albumartist, artist, genre, tracknumber, year)
+        # print(title, length, codec, channels, bitspersample, samplerate, albumartist, artist, genre, tracknumber, year)
 
 os.remove(download_cache)
