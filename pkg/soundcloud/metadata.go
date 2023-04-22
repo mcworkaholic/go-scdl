@@ -16,7 +16,7 @@ import (
 	"github.com/mcworkaholic/go-scdl/pkg/theme"
 )
 
-func AddMetadata() error {
+func AddMetadata(SoundData) error {
 	// t500 := "t500x500" // for getting a higher res img
 	// imgBytes := make([]byte, 0)
 	// os := runtime.GOOS

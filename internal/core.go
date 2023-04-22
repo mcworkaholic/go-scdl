@@ -120,7 +120,7 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 		if err != nil {
 			panic(err)
 		}
-		err = soundcloud.AddMetadata()
+		err = soundcloud.AddMetadata(*soundData)
 		if err != nil {
 			fmt.Println("\n" + theme.Red("An error occurred while adding tags to the track : "+"\n"+theme.Red(err)))
 		}
