@@ -36,10 +36,11 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 		panic(err)
 	}
 
-	// Set the file path, name, artist
+	// Set the file path, name, artist attrs of the JSON file
 	soundData.Filepath = filepath.FromSlash(path.Join(filePath, soundData.Title+".ogg"))
 	soundData.Filename = soundData.Title + ".ogg"
 	permaUrl := soundData.PermalinkUrl
+
 	// Find the index of the last "/" and the second to last "/"
 	lastSlashIndex := strings.LastIndex(permaUrl, "/")
 	secondToLastSlashIndex := strings.LastIndex(permaUrl[:lastSlashIndex], "/")
@@ -47,9 +48,12 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 	// Extract the text between the slashes
 	textBetweenSlashes := permaUrl[secondToLastSlashIndex+1 : lastSlashIndex]
 
-	// Split the text into words and capitalize each one
-	words := strings.Split(textBetweenSlashes, "_")
-	words = strings.Split(words[0], "-") // in case the delimiter is "-"
+	// Replace any "_" or "-" characters with spaces
+	cleanedText := strings.ReplaceAll(textBetweenSlashes, "_", " ")
+	cleanedText = strings.ReplaceAll(cleanedText, "-", " ")
+
+	// Split the cleaned text into words and capitalize each one
+	words := strings.Split(cleanedText, " ")
 	for i, word := range words {
 		words[i] = strings.Title(word)
 	}
