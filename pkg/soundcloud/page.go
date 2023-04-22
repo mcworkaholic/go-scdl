@@ -38,30 +38,17 @@ func GetSoundMetaData(apiUrl string, url string, clientId string) *SoundData {
 		panic(err)
 	}
 
-	// If file is empty or doesn't contain a valid JSON array, add opening bracket
+	// If file is empty, add opening bracket
 	fi, _ := file.Stat()
 	if fi.Size() == 0 {
 		_, err = file.Write([]byte("["))
 		if err != nil {
 			panic(err)
 		}
-	} else {
-		// Check if the file ends with a closing bracket, indicating a valid JSON array
-		_, err = file.Seek(-1, io.SeekEnd)
+	} else { // If file is not empty, add comma separator
+		_, err = file.Write([]byte(","))
 		if err != nil {
 			panic(err)
-		}
-		b := make([]byte, 1)
-		_, err = file.Read(b)
-		if err != nil {
-			panic(err)
-		}
-		if string(b) != "]" {
-			// If the file doesn't end with a closing bracket, add a comma separator
-			_, err = file.Write([]byte(","))
-			if err != nil {
-				panic(err)
-			}
 		}
 	}
 
