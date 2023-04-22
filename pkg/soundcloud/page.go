@@ -23,17 +23,19 @@ var Sound *SoundData
 // extract some meta data under : window.__sc_hydration
 // check if the track exists and open to public
 func GetSoundMetaData(apiUrl string, url string, clientId string) *SoundData {
-
 	statusCode, body, err := client.Get(apiUrl)
-
 	if err != nil || statusCode != http.StatusOK {
 		return nil
 	}
-
 	json.Unmarshal(body, &Sound)
 
-	// Write json output to file
-	err = os.WriteFile(path.Join(".\\json", "download-cache.json"), body, 0666)
+	// Append json output to file
+	f, err := os.OpenFile(path.Join(".\\json", "download-cache.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+	_, err = f.Write(body)
 	if err != nil {
 		panic(err)
 	}
