@@ -40,8 +40,11 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 	// Set the file path, name, artist attrs of the JSON file
 	soundData.Filepath = filepath.FromSlash(path.Join(filePath, soundData.Title+".ogg"))
 	soundData.Filename = soundData.Title + ".ogg"
+	t500 := "t500x500" // for getting a higher res img
+	if soundData.ArtworkUrl != "" {
+		soundData.ArtworkUrl = strings.Replace(soundData.ArtworkUrl, "large", t500, 1)
+	}
 	permaUrl := soundData.PermalinkUrl
-
 	// Find the index of the last "/" and the second to last "/"
 	lastSlashIndex := strings.LastIndex(permaUrl, "/")
 	secondToLastSlashIndex := strings.LastIndex(permaUrl[:lastSlashIndex], "/")
