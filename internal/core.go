@@ -55,13 +55,13 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 	} else {
 		for _, url := range urls {
 			apiUrl := soundcloud.GetTrackInfoAPIUrl(url, clientId)
+			soundcloud.StartJSON()
 			soundData := soundcloud.GetSoundMetaData(downloadPath, apiUrl, url, clientId)
 			if soundData == nil {
 				fmt.Printf("%s URL : %s \n", theme.Red("[+]"), theme.Magenta(url))
 				fmt.Println(theme.Yellow("URL doesn't return a valid track. Is the track publicly accessible?"))
 				continue
 			}
-			soundcloud.StartJSON()
 			fmt.Printf("%s %s found. Title : %s - Duration : %s\n", theme.Green("[+]"), strings.Title(soundData.Kind), theme.Magenta(soundData.Title), theme.Magenta(theme.FormatTime(soundData.Duration)))
 			// check if the url is a playlist
 			if soundData.Kind == "playlist" {
