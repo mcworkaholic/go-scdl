@@ -40,10 +40,37 @@ func SaveResponse(filePath string, apiUrl string, i int) *Track {
 	if err != nil {
 		panic(err)
 	}
+	// Convert the map to an interface{}
+	resultIfc := interface{}(result)
 
-	// Set the file path, name, artist attrs of the JSON file
-	track.Filepath = filepath.FromSlash(path.Join(filePath, track.Title+".ogg"))
-	track.Filename = track.Title + ".ogg"
+	// Check if the result is a map
+	if resultMap, ok := resultIfc.(map[string]interface{}); ok {
+		// Check if the "kind" key is set to "playlist"
+		if kind, ok := resultMap["kind"].(string); ok && kind == "playlist" {
+			// Check if the "tracks" key exists
+			if tracks, ok := resultMap["tracks"].([]interface{}); ok {
+				// "tracks" is an array of tracks
+
+				// Loop through each track and add the extra fields
+				for i := 0; i < len(tracks); i++ {
+					// Set the file path, name, artist attrs of the JSON file
+					filepath := filepath.FromSlash(path.Join(filePath, track.Title+".ogg"))
+					filename := track.Title + ".ogg"
+					if track, ok := tracks[i].(map[string]interface{}); ok {
+						// Add the extra fields to the track object
+						track["file_path"] = filepath
+						track["file_name"] = filename
+					}
+				}
+			} else {
+				// "tracks" key is not present or is not an array
+			}
+		} else {
+			// "kind" key is not present or is not set to "playlist"
+		}
+	} else {
+		// result is not a map
+	}
 
 	// Format the JSON response for writing to file
 	formattedJson, err := json.MarshalIndent(&result, "", "    ")
