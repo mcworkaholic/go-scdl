@@ -21,7 +21,7 @@ import (
 
 var Sound *SoundData
 
-func SaveResponse(url string) {
+func SaveResponse(url string, urlKind string) {
 	resp, err := http.Get(url)
 	if err != nil {
 		panic(err)
@@ -51,26 +51,35 @@ func SaveResponse(url string) {
 	if err != nil {
 		panic(err)
 	} else {
-		// If file is empty, add opening bracket for JSON array
-		fi, _ := file.Stat()
-		if fi.Size() == 0 {
-			_, err = file.Write([]byte("["))
-			if err != nil {
-				panic(err)
-			}
+		if urlKind != "playlist" {
 
-			// Write the formatted JSON response to file
-			_, err = file.Write([]byte(formattedJson))
-			if err != nil {
-				panic(err)
-			}
+			// If file is empty, add opening bracket for JSON array
+			fi, _ := file.Stat()
+			if fi.Size() == 0 {
+				_, err = file.Write([]byte("["))
+				if err != nil {
+					panic(err)
+				}
 
-		} else { // If file is not empty, add comma separator
-			_, err = file.Write([]byte(","))
-			if err != nil {
-				panic(err)
-			}
+				// Write the formatted JSON response to file
+				_, err = file.Write([]byte(formattedJson))
+				if err != nil {
+					panic(err)
+				}
 
+			} else { // If file is not empty, add comma separator
+				_, err = file.Write([]byte(","))
+				if err != nil {
+					panic(err)
+				}
+
+				// Write the formatted JSON response to file
+				_, err = file.Write([]byte(formattedJson))
+				if err != nil {
+					panic(err)
+				}
+			}
+		} else {
 			// Write the formatted JSON response to file
 			_, err = file.Write([]byte(formattedJson))
 			if err != nil {
@@ -80,16 +89,21 @@ func SaveResponse(url string) {
 	}
 }
 
-func CloseJSON() {
-	// Create or open the file for appending
-	file, err := os.OpenFile(path.Join(".\\json", "response.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
-	if err != nil {
-		panic(err)
+func CloseJSON(urlKind string) {
+	if urlKind != "playlist" {
+		// Create or open the file for appending
+		file, err := os.OpenFile(path.Join(".\\json", "response.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+		if err != nil {
+			panic(err)
+		}
+		_, err = file.Write([]byte("]"))
+		if err != nil {
+			panic(err)
+		}
+	} else {
+		// Do nothing
 	}
-	_, err = file.Write([]byte("]"))
-	if err != nil {
-		panic(err)
-	}
+
 }
 
 // extract some meta data under : window.__sc_hydration
