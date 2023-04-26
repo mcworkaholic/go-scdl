@@ -63,6 +63,16 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 				}
 			} else {
 				// "tracks" key is not present or is not an array
+				if kind, ok := resultMap["kind"].(string); ok && kind == "track" {
+					if kind, ok := tracks[i].(map[string]interface{}); ok {
+						// Set the file path, name, artist attrs of the JSON file
+						filepath := filepath.FromSlash(path.Join(filePath, kind["title"].(string)+".ogg"))
+						filename := kind["title"].(string) + ".ogg"
+						// Add the extra fields to the track object
+						kind["file_path"] = filepath
+						kind["file_name"] = filename
+					}
+				}
 			}
 		} else {
 			// "kind" key is not present or is not set to "playlist"
