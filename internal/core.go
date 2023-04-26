@@ -21,6 +21,7 @@ var (
 )
 
 func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
+
 	urlString := ""
 	urls := []string{}
 	if len(args) > 0 {

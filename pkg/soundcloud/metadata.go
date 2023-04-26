@@ -19,7 +19,6 @@ import (
 func AddMetadata(SoundData) error {
 	// t500 := "t500x500" // for getting a higher res img
 	// imgBytes := make([]byte, 0)
-	// os := runtime.GOOS
 
 	// // check for artist thing
 	// if track.SoundData.ArtworkUrl != "" {
