@@ -76,17 +76,15 @@ func SaveResponse(url string, i int) {
 	}
 }
 
-func CloseJSON(i int) {
+func CloseJSON() {
 	// Create or open the file for appending
 	file, err := os.OpenFile(path.Join(".\\json", "response.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		panic(err)
 	}
-	if i > 0 {
-		_, err = file.Write([]byte("]"))
-		if err != nil {
-			panic(err)
-		}
+	_, err = file.Write([]byte("]"))
+	if err != nil {
+		panic(err)
 	}
 }
 

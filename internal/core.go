@@ -53,8 +53,7 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 		// select one to download
 		soundData = selectSearchUrl(searchResult)
 	} else {
-		i := 0
-		for _, url := range urls {
+		for i, url := range urls {
 			i++
 			apiUrl := soundcloud.GetTrackInfoAPIUrl(url, clientId)
 			soundData := soundcloud.GetSoundMetaData(downloadPath, apiUrl, url, clientId)
@@ -111,7 +110,7 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 					fmt.Printf("\n%s Track saved to path: %s\n", theme.Green("[-]"), theme.Magenta(filepath.FromSlash(path.Join(downloadPath, soundData.Title+"."+track.Ext))))
 				}()
 			}
-			soundcloud.CloseJSON(i)
 		}
+		soundcloud.CloseJSON()
 	}
 }
