@@ -100,10 +100,7 @@ func CloseJSON(urlKind string) {
 		if err != nil {
 			panic(err)
 		}
-	} else {
-		// Do nothing
 	}
-
 }
 
 // extract some meta data under : window.__sc_hydration
