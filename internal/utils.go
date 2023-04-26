@@ -133,10 +133,10 @@ func getPlaylistDownloadTracks(soundData *soundcloud.SoundData, clientId string)
 	playlistTracks := soundcloud.GetPlaylistTracks(soundData, clientId)
 
 	fmt.Printf("%s Playlist contains : %s track(s)\n", theme.Green("[+]"), theme.Magenta(len(playlistTracks)))
-	if !promptYesNo() {
-		fmt.Printf("%s Exiting...\n", theme.Red("[-]"))
-		os.Exit(0)
-	}
+	// if !promptYesNo() {
+	// 	fmt.Printf("%s Exiting...\n", theme.Red("[-]"))
+	// 	os.Exit(0)
+	// }
 	for i, t := range playlistTracks {
 		wg.Add(1)
 
