@@ -63,26 +63,30 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 				}
 			}
 		} else {
-			// "kind" is not set to "playlist"
-			if kind, ok := resultMap["kind"].(string); ok && kind != "playlist" {
-				if track, ok := resultMap["kind"].(map[string]interface{}); ok {
-					// Set the file path, name, artist attrs of the JSON file
-					filepath := filepath.FromSlash(path.Join(filePath, track["title"].(string)+".ogg"))
-					filename := track["title"].(string) + ".ogg"
-					// Add the extra fields to the track object
-					track["file_path"] = filepath
-					track["file_name"] = filename
+			if arr, ok := resultIfc.([]interface{}); ok {
+				// Loop through each object in the array and add the extra fields
+				for i := 0; i < len(arr); i++ {
+					if track, ok := arr[i].(map[string]interface{}); ok {
+						// Set the file path, name, artist attrs of the JSON file
+						filepath := filepath.FromSlash(path.Join(filePath, track["title"].(string)+".ogg"))
+						filename := track["title"].(string) + ".ogg"
+						// Add the extra fields to the track object
+						track["file_path"] = filepath
+						track["file_name"] = filename
+					}
 				}
 			}
 		}
+		// Format the JSON response for writing to file
+		formattedJson, err := json.MarshalIndent(&result, "", "    ")
+		if err != nil {
+			panic(err)
+		}
+		WriteJSON(formattedJson, i)
 	}
+}
 
-	// Format the JSON response for writing to file
-	formattedJson, err := json.MarshalIndent(&result, "", "    ")
-	if err != nil {
-		panic(err)
-	}
-
+func WriteJSON(resp []byte, i int) {
 	// Create or open the file for appending
 	file, err := os.OpenFile(path.Join(".\\json", "response.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
@@ -96,7 +100,7 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 				panic(err)
 			}
 			// Write the formatted JSON response to file
-			_, err = file.Write([]byte(formattedJson))
+			_, err = file.Write([]byte(resp))
 			if err != nil {
 				panic(err)
 			}
@@ -106,7 +110,7 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 				panic(err)
 			}
 			// Write the formatted JSON response to file
-			_, err = file.Write([]byte(formattedJson))
+			_, err = file.Write([]byte(resp))
 			if err != nil {
 				panic(err)
 			}
