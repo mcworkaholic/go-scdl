@@ -72,13 +72,13 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 				resultMap["file_path"] = filepath
 				resultMap["file_name"] = filename
 			}
-			// Format the JSON response for writing to file
-			formattedJson, err := json.MarshalIndent(&result, "", "    ")
-			if err != nil {
-				panic(err)
-			}
-			WriteJSON(formattedJson, i)
 		}
+		// Format the JSON response for writing to file
+		formattedJson, err := json.MarshalIndent(&result, "", "    ")
+		if err != nil {
+			panic(err)
+		}
+		WriteJSON(formattedJson, i)
 	}
 }
 
