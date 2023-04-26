@@ -63,8 +63,8 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 				}
 			}
 		} else {
-			// "kind" key is not present or is not set to "playlist"
-			if track, ok := resultMap["kind"].(map[string]interface{}); ok && kind == "track" {
+			// "kind" is not set to "playlist"
+			if track, ok := resultMap["kind"].(map[string]interface{}); ok && kind != "playlist" {
 				// Set the file path, name, artist attrs of the JSON file
 				filepath := filepath.FromSlash(path.Join(filePath, track["title"].(string)+".ogg"))
 				filename := track["title"].(string) + ".ogg"
