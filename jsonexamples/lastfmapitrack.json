@@ -1,0 +1,38 @@
+{
+	"track": {
+		"name": "KiRRA",
+		"url": "https://www.last.fm/music/CharlestheFirst/_/KiRRA",
+		"duration": "198000",
+		"streamable": {
+			"#text": "0",
+			"fulltrack": "0"
+		},
+		"listeners": "7221",
+		"playcount": "32398",
+		"artist": {
+			"name": "CharlestheFirst",
+			"url": "https://www.last.fm/music/CharlestheFirst"
+		},
+		"album": {
+			"artist": "CharlestheFirst",
+			"title": "The Reach EP",
+			"url": "https://www.last.fm/music/CharlestheFirst/The+Reach+EP",
+			"image": [{
+				"#text": "https://lastfm.freetls.fastly.net/i/u/34s/08ab73aece759d8c9002d6a8482604a0.png",
+				"size": "small"
+			}, {
+				"#text": "https://lastfm.freetls.fastly.net/i/u/64s/08ab73aece759d8c9002d6a8482604a0.png",
+				"size": "medium"
+			}, {
+				"#text": "https://lastfm.freetls.fastly.net/i/u/174s/08ab73aece759d8c9002d6a8482604a0.png",
+				"size": "large"
+			}, {
+				"#text": "https://lastfm.freetls.fastly.net/i/u/300x300/08ab73aece759d8c9002d6a8482604a0.png",
+				"size": "extralarge"
+			}]
+		},
+		"toptags": {
+			"tag": []
+		}
+	}
+}
