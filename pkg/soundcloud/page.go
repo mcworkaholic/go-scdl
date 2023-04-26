@@ -21,7 +21,7 @@ import (
 
 var Sound *SoundData
 
-func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
+func SaveResponse(filePath string, apiUrl string, i int) {
 	resp, err := http.Get(apiUrl)
 	if err != nil {
 		panic(err)
@@ -65,11 +65,12 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 				}
 			}
 		} else {
+			// WE DO NOT NEED Songtitle variable
 			// Check if the "tracks" key does not exist and "kind" is not set to "playlist"
 			if _, tracksExist := resultMap["tracks"]; !tracksExist && resultMap["kind"].(string) != "playlist" {
 				// Set the file path, name, artist attrs of the JSON file
-				filepath := filepath.FromSlash(path.Join(filePath, songTitle+".ogg"))
-				filename := songTitle + ".ogg"
+				filepath := filepath.FromSlash(path.Join(filePath, resultMap["title"].(string)+".ogg"))
+				filename := resultMap["title"].(string) + ".ogg"
 				// Add the extra fields to the result object
 				resultMap["file_path"] = filepath
 				resultMap["file_name"] = filename
