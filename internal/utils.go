@@ -167,15 +167,15 @@ func getTrack(downloadTracks []soundcloud.DownloadTrack, bestQuality bool) sound
 
 }
 
-func promptYesNo() bool {
-	prompt := promptui.Select{
-		Label: "Download [Y/N]",
-		Items: []string{"Y", "N"},
-	}
-	_, result, err := prompt.Run()
-	if err != nil {
-		fmt.Printf("%s Download aborted!\n", theme.Red("[-]"))
-		os.Exit(0)
-	}
-	return result == "Y"
-}
+// func promptYesNo() bool {
+// 	prompt := promptui.Select{
+// 		Label: "Download [Y/N]",
+// 		Items: []string{"Y", "N"},
+// 	}
+// 	_, result, err := prompt.Run()
+// 	if err != nil {
+// 		fmt.Printf("%s Download aborted!\n", theme.Red("[-]"))
+// 		os.Exit(0)
+// 	}
+// 	return result == "Y"
+// }
