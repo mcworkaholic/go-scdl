@@ -21,6 +21,39 @@ import (
 
 var Sound *SoundData
 
+func PrintResponse(url string) {
+	resp, err := http.Get("https://jsonplaceholder.typicode.com/posts/1")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	var result map[string]interface{}
+	err = json.Unmarshal(body, &result)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	// Format the JSON response for printing
+	formattedJson, err := json.MarshalIndent(result, "", "    ")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	// Print the formatted JSON response
+	fmt.Println(string(formattedJson))
+}
+
 // extract some meta data under : window.__sc_hydration
 // write to JSON file
 // check if the track exists and open to public
@@ -29,7 +62,8 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 	if err != nil || statusCode != http.StatusOK {
 		return nil
 	}
-	fmt.Println(client.Get(apiUrl))
+
+	PrintResponse(apiUrl)
 
 	// Unmarshal the JSON response into a SoundData struct
 	var soundData SoundData
