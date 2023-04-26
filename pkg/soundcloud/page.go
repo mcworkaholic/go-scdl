@@ -63,19 +63,19 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 				}
 			}
 		} else {
-			if arr, ok := resultIfc.([]interface{}); ok {
-				// Loop through each object in the array and add the extra fields
-				for i := 0; i < len(arr); i++ {
-					if track, ok := arr[i].(map[string]interface{}); ok {
-						// Set the file path, name, artist attrs of the JSON file
-						filepath := filepath.FromSlash(path.Join(filePath, track["title"].(string)+".ogg"))
-						filename := track["title"].(string) + ".ogg"
-						// Add the extra fields to the track object
-						track["file_path"] = filepath
-						track["file_name"] = filename
-					}
-				}
-			}
+			// if arr, ok := resultIfc.([]interface{}); ok {
+			// 	// Loop through each object in the array and add the extra fields
+			// 	for i := 0; i < len(arr); i++ {
+			// 		if track, ok := arr[i].(map[string]interface{}); ok {
+			// 			// Set the file path, name, artist attrs of the JSON file
+			// 			filepath := filepath.FromSlash(path.Join(filePath, track["title"].(string)+".ogg"))
+			// 			filename := track["title"].(string) + ".ogg"
+			// 			// Add the extra fields to the track object
+			// 			resultIfc["file_path"] = filepath
+			// 			track["file_name"] = filename
+			// 		}
+			// 	}
+			// }
 		}
 		// Format the JSON response for writing to file
 		formattedJson, err := json.MarshalIndent(&result, "", "    ")
@@ -91,30 +91,26 @@ func WriteJSON(resp []byte, i int) {
 	file, err := os.OpenFile(path.Join(".\\json", "response.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		panic(err)
-	} else {
-		// If file is empty, add opening bracket for JSON array
-		fi, _ := file.Stat()
-		if fi.Size() == 0 {
-			_, err = file.Write([]byte("["))
-			if err != nil {
-				panic(err)
-			}
-			// Write the formatted JSON response to file
-			_, err = file.Write([]byte(resp))
-			if err != nil {
-				panic(err)
-			}
-		} else if i > 0 { // If file is not empty, add comma separator
-			_, err = file.Write([]byte(","))
-			if err != nil {
-				panic(err)
-			}
-			// Write the formatted JSON response to file
-			_, err = file.Write([]byte(resp))
-			if err != nil {
-				panic(err)
-			}
-		}
+	}
+	defer file.Close() // ensure that file is closed after writing
+
+	// Determine whether to write opening bracket or comma separator
+	var prefix []byte
+	switch fi, _ := file.Stat(); {
+	case fi.Size() == 0:
+		prefix = []byte("[")
+	case i > 0:
+		prefix = []byte(",")
+	}
+
+	// Write prefix and response to file
+	_, err = file.Write(prefix)
+	if err != nil {
+		panic(err)
+	}
+	_, err = file.Write(resp)
+	if err != nil {
+		panic(err)
 	}
 }
 
