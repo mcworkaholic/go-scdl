@@ -63,26 +63,22 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 				}
 			}
 		} else {
-			// if arr, ok := resultIfc.([]interface{}); ok {
-			// 	// Loop through each object in the array and add the extra fields
-			// 	for i := 0; i < len(arr); i++ {
-			// 		if track, ok := arr[i].(map[string]interface{}); ok {
-			// 			// Set the file path, name, artist attrs of the JSON file
-			// 			filepath := filepath.FromSlash(path.Join(filePath, track["title"].(string)+".ogg"))
-			// 			filename := track["title"].(string) + ".ogg"
-			// 			// Add the extra fields to the track object
-			// 			resultIfc["file_path"] = filepath
-			// 			track["file_name"] = filename
-			// 		}
-			// 	}
-			// }
+			// Check if the "tracks" key does not exist and "kind" is not set to "playlist"
+			if _, tracksExist := resultMap["tracks"]; !tracksExist && resultMap["kind"].(string) != "playlist" {
+				// Set the file path, name, artist attrs of the JSON file
+				filepath := filepath.FromSlash(path.Join(filePath, songTitle+".ogg"))
+				filename := songTitle + ".ogg"
+				// Add the extra fields to the result object
+				resultMap["file_path"] = filepath
+				resultMap["file_name"] = filename
+			}
+			// Format the JSON response for writing to file
+			formattedJson, err := json.MarshalIndent(&result, "", "    ")
+			if err != nil {
+				panic(err)
+			}
+			WriteJSON(formattedJson, i)
 		}
-		// Format the JSON response for writing to file
-		formattedJson, err := json.MarshalIndent(&result, "", "    ")
-		if err != nil {
-			panic(err)
-		}
-		WriteJSON(formattedJson, i)
 	}
 }
 
