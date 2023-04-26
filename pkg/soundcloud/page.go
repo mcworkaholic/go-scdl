@@ -50,27 +50,33 @@ func SaveResponse(url string) {
 	file, err := os.OpenFile(path.Join(".\\json", "response.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		panic(err)
-	}
+	} else {
+		// If file is empty, add opening bracket for JSON array
+		fi, _ := file.Stat()
+		if fi.Size() == 0 {
+			_, err = file.Write([]byte("["))
+			if err != nil {
+				panic(err)
+			}
 
-	// If file is empty, add opening bracket for JSON array
-	fi, _ := file.Stat()
-	if fi.Size() == 0 {
-		_, err = file.Write([]byte("["))
-		if err != nil {
-			panic(err)
+			// Write the formatted JSON response to file
+			_, err = file.Write([]byte(formattedJson))
+			if err != nil {
+				panic(err)
+			}
+
+		} else { // If file is not empty, add comma separator
+			_, err = file.Write([]byte(","))
+			if err != nil {
+				panic(err)
+			}
+
+			// Write the formatted JSON response to file
+			_, err = file.Write([]byte(formattedJson))
+			if err != nil {
+				panic(err)
+			}
 		}
-
-	} else { // If file is not empty, add comma separator
-		_, err = file.Write([]byte(","))
-		if err != nil {
-			panic(err)
-		}
-	}
-
-	// Write the formatted JSON response to file
-	err = os.WriteFile(".\\json\\response.json", formattedJson, 0644)
-	if err != nil {
-		panic(err)
 	}
 }
 
