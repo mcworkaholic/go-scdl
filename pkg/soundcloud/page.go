@@ -21,7 +21,7 @@ import (
 
 var Sound *SoundData
 
-func SaveResponse(url string) {
+func SaveResponse(url string, i int) {
 	resp, err := http.Get(url)
 	if err != nil {
 		panic(err)
@@ -52,8 +52,7 @@ func SaveResponse(url string) {
 		panic(err)
 	} else {
 		// If file is empty, add opening bracket for JSON array
-		fi, _ := file.Stat()
-		if fi.Size() == 0 {
+		if i == 0 {
 			_, err = file.Write([]byte("["))
 			if err != nil {
 				panic(err)
@@ -63,7 +62,7 @@ func SaveResponse(url string) {
 			if err != nil {
 				panic(err)
 			}
-		} else { // If file is not empty, add comma separator
+		} else if i > 0 { // If file is not empty, add comma separator
 			_, err = file.Write([]byte(","))
 			if err != nil {
 				panic(err)
@@ -77,15 +76,17 @@ func SaveResponse(url string) {
 	}
 }
 
-func CloseJSON() {
+func CloseJSON(i int) {
 	// Create or open the file for appending
 	file, err := os.OpenFile(path.Join(".\\json", "response.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		panic(err)
 	}
-	_, err = file.Write([]byte("]"))
-	if err != nil {
-		panic(err)
+	if i > 0 {
+		_, err = file.Write([]byte("]"))
+		if err != nil {
+			panic(err)
+		}
 	}
 }
 
