@@ -52,7 +52,8 @@ func SaveResponse(url string, i int) {
 		panic(err)
 	} else {
 		// If file is empty, add opening bracket for JSON array
-		if i == 0 {
+		fi, _ := file.Stat()
+		if fi.Size() == 0 {
 			_, err = file.Write([]byte("["))
 			if err != nil {
 				panic(err)
