@@ -55,7 +55,6 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 	} else {
 		for _, url := range urls {
 			apiUrl := soundcloud.GetTrackInfoAPIUrl(url, clientId)
-			soundcloud.StartJSON()
 			soundData := soundcloud.GetSoundMetaData(downloadPath, apiUrl, url, clientId)
 			if soundData == nil {
 				fmt.Printf("%s URL : %s \n", theme.Red("[+]"), theme.Magenta(url))
