@@ -89,7 +89,6 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 				wg.Wait()
 
 				fmt.Printf("\n%s Playlist saved to : %s\n", theme.Green("[-]"), theme.Magenta(downloadPath))
-				return
 			} else if soundData.Kind != "playlist" {
 				downloadTracks := soundcloud.GetFormattedDL(soundData, clientId)
 				os := runtime.GOOS
@@ -111,6 +110,6 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 				}()
 			}
 		}
+		soundcloud.CloseJSON()
 	}
-	soundcloud.CloseJSON()
 }
