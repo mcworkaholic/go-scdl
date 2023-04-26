@@ -21,7 +21,7 @@ import (
 
 var Sound *SoundData
 
-func SaveResponse(filePath string, apiUrl string, i int) *Track {
+func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 	resp, err := http.Get(apiUrl)
 	if err != nil {
 		panic(err)
@@ -107,7 +107,6 @@ func SaveResponse(filePath string, apiUrl string, i int) *Track {
 			}
 		}
 	}
-	return &track
 }
 
 func CloseJSON() {
