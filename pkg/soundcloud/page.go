@@ -21,8 +21,8 @@ import (
 
 var Sound *SoundData
 
-func SaveResponse(url string, i int) {
-	resp, err := http.Get(url)
+func SaveResponse(filePath string, apiUrl string, i int) *Track {
+	resp, err := http.Get(apiUrl)
 	if err != nil {
 		panic(err)
 	}
@@ -34,14 +34,18 @@ func SaveResponse(url string, i int) {
 		panic(err)
 	}
 
-	var result map[string]interface{}
-	err = json.Unmarshal(body, &result)
+	var track Track
+	err = json.Unmarshal(body, &track)
 	if err != nil {
 		panic(err)
 	}
 
+	// Set the file path, name, artist attrs of the JSON file
+	track.Filepath = filepath.FromSlash(path.Join(filePath, track.Title+".ogg"))
+	track.Filename = track.Title + ".ogg"
+
 	// Format the JSON response for writing to file
-	formattedJson, err := json.MarshalIndent(result, "", "    ")
+	formattedJson, err := json.MarshalIndent(&track, "", "    ")
 	if err != nil {
 		panic(err)
 	}
@@ -75,6 +79,7 @@ func SaveResponse(url string, i int) {
 			}
 		}
 	}
+	return &track
 }
 
 func CloseJSON() {
@@ -92,7 +97,7 @@ func CloseJSON() {
 // extract some meta data under : window.__sc_hydration
 // write to JSON file
 // check if the track exists and open to public
-func GetSoundMetaData(filePath string, apiUrl string, url string, clientId string) *SoundData {
+func GetSoundMetaData(filePath string, apiUrl string) *SoundData {
 	statusCode, body, err := client.Get(apiUrl)
 	if err != nil || statusCode != http.StatusOK {
 		return nil
