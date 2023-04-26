@@ -22,7 +22,7 @@ import (
 var Sound *SoundData
 
 func PrintResponse(url string) {
-	resp, err := http.Get("https://jsonplaceholder.typicode.com/posts/1")
+	resp, err := http.Get(url)
 	if err != nil {
 		fmt.Println(err)
 		return
