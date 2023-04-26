@@ -46,8 +46,40 @@ func SaveResponse(url string) {
 		panic(err)
 	}
 
+	// Create or open the file for appending
+	file, err := os.OpenFile(path.Join(".\\json", "response.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	if err != nil {
+		panic(err)
+	}
+
+	// If file is empty, add opening bracket for JSON array
+	fi, _ := file.Stat()
+	if fi.Size() == 0 {
+		_, err = file.Write([]byte("["))
+		if err != nil {
+			panic(err)
+		}
+
+	} else { // If file is not empty, add comma separator
+		_, err = file.Write([]byte(","))
+		if err != nil {
+			panic(err)
+		}
+	}
 	// Write the formatted JSON response to file
 	err = os.WriteFile(".\\json\\response.json", formattedJson, 0644)
+	if err != nil {
+		panic(err)
+	}
+}
+
+func CloseJSON() {
+	// Create or open the file for appending
+	file, err := os.OpenFile(path.Join(".\\json", "response.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	if err != nil {
+		panic(err)
+	}
+	_, err = file.Write([]byte("]"))
 	if err != nil {
 		panic(err)
 	}
@@ -99,44 +131,6 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 	// Join the words back into a single string
 	formattedUsername := strings.Join(words, " ")
 	soundData.Username = formattedUsername
-
-	// Create or open the file for appending
-	file, err := os.OpenFile(path.Join(".\\json", "download-cache.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
-	if err != nil {
-		panic(err)
-	}
-
-	// If file is empty, add opening bracket
-	fi, _ := file.Stat()
-	if fi.Size() == 0 {
-		_, err = file.Write([]byte("["))
-		if err != nil {
-			panic(err)
-		}
-	} else { // If file is not empty, add comma separator
-		_, err = file.Write([]byte(","))
-		if err != nil {
-			panic(err)
-		}
-	}
-
-	// Marshal the SoundData struct into JSON
-	soundDataBytes, err := json.Marshal(soundData)
-	if err != nil {
-		panic(err)
-	}
-
-	// Write JSON output to file
-	_, err = file.Write(soundDataBytes)
-	if err != nil {
-		panic(err)
-	}
-
-	// Close the file
-	err = file.Close()
-	if err != nil {
-		panic(err)
-	}
 
 	return &soundData
 }
