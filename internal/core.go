@@ -61,6 +61,7 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 				fmt.Println(theme.Yellow("URL doesn't return a valid track. Is the track publicly accessible?"))
 				continue
 			}
+			soundcloud.SaveResponse(apiUrl)
 			fmt.Printf("%s %s found. Title : %s - Duration : %s\n", theme.Green("[+]"), strings.Title(soundData.Kind), theme.Magenta(soundData.Title), theme.Magenta(theme.FormatTime(soundData.Duration)))
 			// check if the url is a playlist
 			if soundData.Kind == "playlist" {

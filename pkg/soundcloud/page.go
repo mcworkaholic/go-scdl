@@ -95,8 +95,6 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 		return nil
 	}
 
-	SaveResponse(apiUrl)
-
 	// Unmarshal the JSON response into a SoundData struct
 	var soundData SoundData
 	err = json.Unmarshal(body, &soundData)
