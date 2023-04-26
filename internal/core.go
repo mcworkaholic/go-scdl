@@ -111,6 +111,6 @@ func Sc(args []string, downloadPath string, bestQuality bool, search bool) {
 				}()
 			}
 		}
-		soundcloud.CloseJSON()
 	}
+	soundcloud.CloseJSON()
 }
