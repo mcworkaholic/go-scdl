@@ -35,7 +35,8 @@ func SaveResponse(filePath string, apiUrl string, i int) *Track {
 	}
 
 	var track Track
-	err = json.Unmarshal(body, &track)
+	var result map[string]interface{}
+	err = json.Unmarshal(body, &result)
 	if err != nil {
 		panic(err)
 	}
@@ -45,7 +46,7 @@ func SaveResponse(filePath string, apiUrl string, i int) *Track {
 	track.Filename = track.Title + ".ogg"
 
 	// Format the JSON response for writing to file
-	formattedJson, err := json.MarshalIndent(&track, "", "    ")
+	formattedJson, err := json.MarshalIndent(&result, "", "    ")
 	if err != nil {
 		panic(err)
 	}
