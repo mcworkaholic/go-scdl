@@ -34,7 +34,6 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 		panic(err)
 	}
 
-	var track Track
 	var result map[string]interface{}
 	err = json.Unmarshal(body, &result)
 	if err != nil {
@@ -53,10 +52,10 @@ func SaveResponse(filePath string, songTitle string, apiUrl string, i int) {
 
 				// Loop through each track and add the extra fields
 				for i := 0; i < len(tracks); i++ {
-					// Set the file path, name, artist attrs of the JSON file
-					filepath := filepath.FromSlash(path.Join(filePath, track.Title+".ogg"))
-					filename := track.Title + ".ogg"
 					if track, ok := tracks[i].(map[string]interface{}); ok {
+						// Set the file path, name, artist attrs of the JSON file
+						filepath := filepath.FromSlash(path.Join(filePath, track["title"].(string)+".ogg"))
+						filename := track["title"].(string) + ".ogg"
 						// Add the extra fields to the track object
 						track["file_path"] = filepath
 						track["file_name"] = filename
