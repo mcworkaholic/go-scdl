@@ -29,6 +29,7 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 	if err != nil || statusCode != http.StatusOK {
 		return nil
 	}
+	fmt.Println(client.Get(apiUrl))
 
 	// Unmarshal the JSON response into a SoundData struct
 	var soundData SoundData
@@ -36,7 +37,6 @@ func GetSoundMetaData(filePath string, apiUrl string, url string, clientId strin
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(body)
 
 	// Set the file path, name, artist attrs of the JSON file
 	soundData.Filepath = filepath.FromSlash(path.Join(filePath, soundData.Title+".ogg"))
