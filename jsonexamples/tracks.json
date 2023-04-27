@@ -1,179 +1,30 @@
 [{
-    "artwork_url": "https://i1.sndcdn.com/artworks-000240375323-kwnrxd-large.jpg",
+    "artwork_url": "https://i1.sndcdn.com/artworks-q4qPIa1f9AkErz8q-i7E4aQ-large.jpg",
     "caption": null,
-    "comment_count": 308,
+    "comment_count": 48,
     "commentable": true,
-    "created_at": "2017-08-29T19:06:53Z",
+    "created_at": "2021-07-22T02:02:53Z",
     "description": "",
-    "display_date": "2017-08-29T19:06:53Z",
-    "download_count": 0,
+    "display_date": "2021-12-13T20:47:03Z",
+    "download_count": 2,
     "downloadable": false,
-    "duration": 193585,
+    "duration": 261851,
     "embeddable_by": "all",
-    "full_duration": 193585,
-    "genre": "Storytelling",
+    "file_name": "GO NUTS.ogg",
+    "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\GO NUTS.ogg",
+    "full_duration": 261851,
+    "genre": "Dubstep",
     "has_downloads_left": false,
-    "id": 340031249,
+    "id": 1091824294,
     "kind": "track",
     "label_name": null,
-    "last_modified": "2022-04-23T07:14:05Z",
-    "license": "cc-by-nc-nd",
-    "likes_count": 19520,
-    "media": {
-        "transcodings": [
-            {
-                "duration": 193585,
-                "format": {
-                    "mime_type": "audio/mpeg",
-                    "protocol": "hls"
-                },
-                "preset": "mp3_0_0",
-                "quality": "sq",
-                "snipped": false,
-                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:340031249/31bf396c-f2d3-47cb-bec9-dcf28e62ba8e/stream/hls"
-            },
-            {
-                "duration": 193585,
-                "format": {
-                    "mime_type": "audio/mpeg",
-                    "protocol": "progressive"
-                },
-                "preset": "mp3_0_0",
-                "quality": "sq",
-                "snipped": false,
-                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:340031249/31bf396c-f2d3-47cb-bec9-dcf28e62ba8e/stream/progressive"
-            },
-            {
-                "duration": 193585,
-                "format": {
-                    "mime_type": "audio/ogg; codecs=\"opus\"",
-                    "protocol": "hls"
-                },
-                "preset": "opus_0_0",
-                "quality": "sq",
-                "snipped": false,
-                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:340031249/2c5fca1a-b9a8-4fbf-8a82-1d872e5829ec/stream/hls"
-            }
-        ]
-    },
-    "monetization_model": "AD_SUPPORTED",
-    "permalink": "mercy-falls",
-    "permalink_url": "https://soundcloud.com/charles-thefirst/mercy-falls",
-    "playback_count": 693513,
-    "policy": "MONETIZE",
-    "public": true,
-    "publisher_metadata": {
-        "artist": "CharlestheFirst",
-        "contains_music": true,
-        "id": 340031249,
-        "isrc": "QM42K1749529",
-        "urn": "soundcloud:tracks:340031249",
-        "writer_composer": "Charles Ingalls"
-    },
-    "purchase_title": "Bandcamp",
-    "purchase_url": "https://charlesthefirst.bandcamp.com/album/the-reach",
-    "release_date": "2017-08-29T00:00:00Z",
-    "reposts_count": 2259,
-    "secret_token": null,
-    "sharing": "public",
-    "state": "finished",
-    "station_permalink": "track-stations:340031249",
-    "station_urn": "soundcloud:system-playlists:track-stations:340031249",
-    "streamable": true,
-    "tag_list": "",
-    "title": "Mercy Falls",
-    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjkxYzExMzQ3LTVmYTMtNDMxZi1iZDE2LWM2NDk0YzUxNmZmYSIsImlhdCI6MTY4MjUxNTM2M30.gnYrhxE5OTx1Ga4hgURVaSCodJ3jWofLmNt-lrOz0rY",
-    "track_format": "single-track",
-    "uri": "https://api.soundcloud.com/tracks/340031249",
-    "urn": "soundcloud:tracks:340031249",
-    "user": {
-        "avatar_url": "https://i1.sndcdn.com/avatars-V7S6S7rXhyggNPsP-lGz9ew-large.jpg",
-        "badges": {
-            "pro": false,
-            "pro_unlimited": false,
-            "verified": true
-        },
-        "city": "Lake Tahoe",
-        "comments_count": 0,
-        "country_code": null,
-        "created_at": "2012-08-13T17:42:03Z",
-        "creator_subscription": {
-            "product": {
-                "id": "free"
-            }
-        },
-        "creator_subscriptions": [
-            {
-                "product": {
-                    "id": "free"
-                }
-            }
-        ],
-        "description": "Charles Elias Ingalls \n11/25/96 - 12/10/21\nThank you for listening. Charlie has so much unreleased music of his own and many collaborations. It will take some time to bring this to you. It will be done with care. Thanks for listening and for your love and support. Beth, Cedar \u0026 Kaya \n@h-wk\nLab Group\n\nField Recordings Vol. 1: https://sellfy.com/p/amh6/",
-        "first_name": "",
-        "followers_count": 73468,
-        "followings_count": 516,
-        "full_name": "",
-        "groups_count": 0,
-        "id": 22082767,
-        "kind": "user",
-        "last_modified": "2022-05-23T23:59:10Z",
-        "last_name": "",
-        "likes_count": 1294,
-        "permalink": "charles-thefirst",
-        "permalink_url": "https://soundcloud.com/charles-thefirst",
-        "playlist_count": 8,
-        "playlist_likes_count": 65,
-        "reposts_count": null,
-        "station_permalink": "artist-stations:22082767",
-        "station_urn": "soundcloud:system-playlists:artist-stations:22082767",
-        "track_count": 60,
-        "uri": "https://api.soundcloud.com/users/22082767",
-        "urn": "soundcloud:users:22082767",
-        "username": "CharlestheFirst",
-        "verified": true,
-        "visuals": {
-            "enabled": true,
-            "tracking": null,
-            "urn": "soundcloud:users:22082767",
-            "visuals": [
-                {
-                    "entry_time": 0,
-                    "link": "https://www.facebook.com/ctfproduction",
-                    "urn": "soundcloud:visuals:128591109",
-                    "visual_url": "https://i1.sndcdn.com/visuals-000022082767-TwdTEy-original.jpg"
-                }
-            ]
-        }
-    },
-    "user_id": 22082767,
-    "visuals": null,
-    "waveform_url": "https://wave.sndcdn.com/MZT5NF1KZtQT_m.json"
-},{
-    "artwork_url": "https://i1.sndcdn.com/artworks-RsFYzrmXWCpsJ7Il-Z9NRHQ-large.jpg",
-    "caption": null,
-    "comment_count": 134,
-    "commentable": true,
-    "created_at": "2021-05-07T18:13:52Z",
-    "description": "",
-    "display_date": "2021-05-11T15:23:53Z",
-    "download_count": 0,
-    "downloadable": false,
-    "duration": 258247,
-    "embeddable_by": "all",
-    "full_duration": 258247,
-    "genre": "",
-    "has_downloads_left": false,
-    "id": 1044697087,
-    "kind": "track",
-    "label_name": null,
-    "last_modified": "2021-05-18T01:07:08Z",
+    "last_modified": "2022-06-20T12:08:43Z",
     "license": "all-rights-reserved",
-    "likes_count": 3530,
+    "likes_count": 270,
     "media": {
         "transcodings": [
             {
-                "duration": 258247,
+                "duration": 261851,
                 "format": {
                     "mime_type": "audio/mpeg",
                     "protocol": "hls"
@@ -181,10 +32,10 @@
                 "preset": "mp3_0_1",
                 "quality": "sq",
                 "snipped": false,
-                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:1044697087/dae67227-7768-4c07-9d44-881c53566687/stream/hls"
+                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:1091824294/7606dd29-dd30-4cdb-a939-f5364f914e43/stream/hls"
             },
             {
-                "duration": 258247,
+                "duration": 261851,
                 "format": {
                     "mime_type": "audio/mpeg",
                     "protocol": "progressive"
@@ -192,10 +43,10 @@
                 "preset": "mp3_0_1",
                 "quality": "sq",
                 "snipped": false,
-                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:1044697087/dae67227-7768-4c07-9d44-881c53566687/stream/progressive"
+                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:1091824294/7606dd29-dd30-4cdb-a939-f5364f914e43/stream/progressive"
             },
             {
-                "duration": 258221,
+                "duration": 261825,
                 "format": {
                     "mime_type": "audio/ogg; codecs=\"opus\"",
                     "protocol": "hls"
@@ -203,48 +54,51 @@
                 "preset": "opus_0_0",
                 "quality": "sq",
                 "snipped": false,
-                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:1044697087/7124b87b-b826-45ba-8a31-52356dd1b376/stream/hls"
+                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:1091824294/433120f6-8d06-4725-be3f-4ef4096ea325/stream/hls"
             }
         ]
     },
     "monetization_model": "NOT_APPLICABLE",
-    "permalink": "penthouse",
-    "permalink_url": "https://soundcloud.com/thought_process_music/penthouse",
-    "playback_count": 62104,
+    "permalink": "go-nuts-vip",
+    "permalink_url": "https://soundcloud.com/conspiracy_bass/go-nuts-vip",
+    "playback_count": 4939,
     "policy": "ALLOW",
     "public": true,
     "publisher_metadata": {
+        "artist": "CONSPIRACY",
         "contains_music": true,
-        "id": 1044697087,
-        "urn": "soundcloud:tracks:1044697087"
+        "id": 1091824294,
+        "isrc": "QZHZD2117346",
+        "urn": "soundcloud:tracks:1091824294",
+        "writer_composer": "KRIS GORBEA"
     },
-    "purchase_title": null,
-    "purchase_url": null,
+    "purchase_title": "Free Download",
+    "purchase_url": "https://hypeddit.com/conspiracybass/gonuts",
     "release_date": null,
-    "reposts_count": 281,
+    "reposts_count": 44,
     "secret_token": null,
     "sharing": "public",
     "state": "finished",
-    "station_permalink": "track-stations:1044697087",
-    "station_urn": "soundcloud:system-playlists:track-stations:1044697087",
+    "station_permalink": "track-stations:1091824294",
+    "station_urn": "soundcloud:system-playlists:track-stations:1091824294",
     "streamable": true,
     "tag_list": "",
-    "title": "Penthouse (Thank You For 5K)",
-    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6Ijc3ZmM4YjA4LWQ5NTgtNDRiOC04NzZjLWYyMmQyYWQzN2E1NCIsImlhdCI6MTY4MjUxNTM2NX0.Ewx7izqCBN5wl5ZqmFoeGTSi5AVko_LnkwgUkC0ISf8",
+    "title": "GO NUTS",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6ImE0NWJmOTI2LTJlZDYtNDkwNS04ZTExLTJjYjYxOTUzMmRhOSIsImlhdCI6MTY4MjU3NTI3OH0.BHhh7nBMvitQgh1-eQrapgQ6D3nBTm1JQhifn9W4Apc",
     "track_format": "single-track",
-    "uri": "https://api.soundcloud.com/tracks/1044697087",
-    "urn": "soundcloud:tracks:1044697087",
+    "uri": "https://api.soundcloud.com/tracks/1091824294",
+    "urn": "soundcloud:tracks:1091824294",
     "user": {
-        "avatar_url": "https://i1.sndcdn.com/avatars-zxZJrWsqhgcAQcpS-rbzmIQ-large.jpg",
+        "avatar_url": "https://i1.sndcdn.com/avatars-YoB11jziN4u2AcmG-4JV6rA-large.jpg",
         "badges": {
             "pro": false,
             "pro_unlimited": true,
             "verified": false
         },
-        "city": "Denver",
+        "city": "",
         "comments_count": 0,
-        "country_code": "US",
-        "created_at": "2013-01-08T03:01:02Z",
+        "country_code": null,
+        "created_at": "2012-10-20T17:06:21Z",
         "creator_subscription": {
             "product": {
                 "id": "creator-pro-unlimited"
@@ -257,43 +111,191 @@
                 }
             }
         ],
-        "description": "@all-lo_collective\n\nbooking: \ncorey.pfaff@subdotmission.com\n\nmanagement: \nhasan@envisionedarts.net\n\neverything else:\nmusic.thoughtprocess@gmail.com",
-        "first_name": "Joseph",
-        "followers_count": 10179,
-        "followings_count": 1000,
-        "full_name": "Joseph Rich",
+        "description": "I TOLD YOU\n\n\n\nW̵̧̧̤͍̼̹͔̠̬͇̬̑̍̑̎̈́̈͝ͅͅë̵̛̜͉̘̰͔̖́̽͆ͅͅ'̴̡̱̭̤͙̥͖̘̰̳̅̈̓̇́̍̇r̴̟͖̙̠͖̅̒̕͝͠ė̴̦̩͛̓̈́̐ ̸̞̟͕͆̈̃̀͊̕n̸̛̞̼̰̫̲͕̞͎̹͐̾̀͊̇̆̆̀o̵͚̞̫͉̲̞̟͖̎͘͘͝t̶̼̰̫̥̓͑̍ ̴̫̫͎͍͕̩̝̟͋͒͒̎͘̕͜h̵͇̜̫̼̣͇͈̗̟͗̏͐̑̔̂̀̄̀̓̌̚ê̸͈͖͎̻̬͓̬̓̏r̴̛̰̉͂̈́͐͝ė̵̛͓͙̺̫͈͍͔̻͈̺̙̉̂͐̓̈́́̔̾̇̓́̌͘͜ͅ ̷̞̙̯̦̠͔̰͉̉͠͠b̷̠͒̓̅̀͂̐͛̀́͝e̴̘͙̘͈̜̦̻͑̆̄̿̈́ͅć̴̱͍͖͖͉͖̯̖͉͍̳̜̠͎̹̈́̈̃̇̾͊̌̉̏̀̓̈́̉͝a̴̢͎̯͍̞̬̞͚̔̽̈́̃̆̍̀̈́̔̔͂̕͘ͅu̶̬͙̟̹̍̊̄̀̐̈͊s̸̨̞̠̘̝̹̖̰̥̉͊ę̵̼͍̍ ̶̨̙̺͇̱͇̲̹͙͍̞̈́͂̈́̑͠ẃ̵̦̥̺̓̒̃̄̉̔̈̇́͆̓́̚͝ͅe̶̜̥̞͔͇̘͇̦͑͛͌́͛͒̊̓̋̇͠͝'̴̢̩̙͍͐̋̈́̀̏̓̋̓̅͂̒̊̚͘͝ř̷͔̓̉͋͌̀̿̐̃̋͑͘e̷̛̛̞̒́͋́̄̀ ̶̩̼̼̆̀̎̃̎̃̔̇͒͂̚̚̕͝f̶̢̖̺̫͎̪̰͈̾̽̌̈́͌̆̑͆̎̕͠r̸̛͖͉̟̤̤͍̦͕̥͙̟̖̞̳͌̐͑̈̽̏̏̽̓̎̋̐͜͠e̶͎̬͈̦̳̤̲̣̱͉̽͐̒̿̆͗͌̕̕e̴̫̞̣̭̰̣͚̯̹̬̓̅̀̉͛̔̌̎̿͝͝,̵̗̬̀̈̀ ̵̧͉̿̈́̉͝w̴̧̧̧̛̳̩̙̫͉̩͎̫͔͉̠̗͑̆̾̅̓̅̑̈́̽̚͠ē̴̜̭̞̬͊͑̉̅̋̋͗͌͋͋̀̕̕͝'̴͖̲͖̿̈́̈͌́̀̑̍̇ṙ̴̡̛͍̤̬͈͕͈̗̠̗̞͔͛́̓͛̃̐̌ȩ̷̨̢̜̞̲̫̤̤̞̲̻̙͜͝ͅ ̶̢͇̤̠͇͕̫͔̣̌̔͗̅̏͆́͘h̵̡̢̻̱͋̄̑͛̐͆̍͘̚͠ȩ̴̢͖̺̥̦͔̍͋̊̒̔̏̿͗̔̾͆͘͝͝͠r̸̢̳̳͈̼̔̆̾̋̅̈́̏̏͛͂̀̈̕͝͝ͅe̵͈̦̬͇̳̹̖͓̮̝͂͒̐̓́́̀͐̿̈́͛̕̕ ̵̡̧̘͔̟̪̹̤͈͖͔̘̌̏̂̾̀̎̀̉̾̽͘̚͠ͅb̴͔͍̈̃̈́e̴͕̩͕̬͈͖͔̪̠͎̠͙͇̔̂͑c̸̫͔̣͇̞̫̘͔̼͓̽͋͒̈̇̆̀̒͛̓͋̏͌͘͝ͅͅà̷̙͖̱̘̗͇̝̥͈͖̱̠̓̊̓͆̂̔̓̚͝u̶͍͓̤̮̍̀̉̋͆̀͑̿͝͝s̴̺̰̳̰͙͉̯̍̋͐ē̶͙̼̈́̋̊͌̓̔͜ ̷͈̤͕̑͆̄̓́̕w̷̢͕̯̹͊͑̾̌̓̊̏ͅë̵̛̘͈͚͚̒̑͒̐̚͝ ̴̧̡̨̛̱̤͈͕̹̊͌͗̈́̕͝ͅạ̸̢͍̘̝̳̰̞̼̮̩̙̭̅̃͂́͗̀̊͂̆͐͝͝ř̸͙͓̰͉̹͍̹͍͈̆͒̄͋̐̃͜e̵͍̪̩̜̜̓̈́̂̈́̍̓̃̀͑͌͗̉͛͘ͅ ̵̧͖̀̽̉̈́̐̅͛̏̕̚͝n̶̯͛̅͊̅̅̋̓͊̐̏͗͝ö̸̧͓̋ț̷̗͇̏͒ ̶̛̬̙̳͓̹̑̓̅̂̑̈́̑̔̿̈̾͆͝͝f̷̧͎͔̬̺̒̈́̐̓̓̀̇͂́̒͗͑̽͘͜͝ṛ̴̺̥͛͛̕ę̶̧̟͙̣͇͈͈͔̺͔̲̦͎̝̊͋̈́̋͒̏̐̆͋͆͝e̶̡̗͎͓̦̻̺̼̪͐̉͗́̿̋́̈́̈́̄͘͘",
+        "first_name": "",
+        "followers_count": 2693,
+        "followings_count": 68,
+        "full_name": "",
         "groups_count": 0,
-        "id": 32210692,
+        "id": 26551644,
         "kind": "user",
-        "last_modified": "2023-02-01T14:07:24Z",
-        "last_name": "Rich",
-        "likes_count": 4988,
-        "permalink": "thought_process_music",
-        "permalink_url": "https://soundcloud.com/thought_process_music",
-        "playlist_count": 11,
-        "playlist_likes_count": 451,
+        "last_modified": "2023-04-16T08:04:49Z",
+        "last_name": "",
+        "likes_count": 2125,
+        "permalink": "conspiracy_bass",
+        "permalink_url": "https://soundcloud.com/conspiracy_bass",
+        "playlist_count": 50,
+        "playlist_likes_count": 57,
         "reposts_count": null,
-        "station_permalink": "artist-stations:32210692",
-        "station_urn": "soundcloud:system-playlists:artist-stations:32210692",
-        "track_count": 51,
-        "uri": "https://api.soundcloud.com/users/32210692",
-        "urn": "soundcloud:users:32210692",
-        "username": "Thought Process",
+        "station_permalink": "artist-stations:26551644",
+        "station_urn": "soundcloud:system-playlists:artist-stations:26551644",
+        "track_count": 80,
+        "uri": "https://api.soundcloud.com/users/26551644",
+        "urn": "soundcloud:users:26551644",
+        "username": "𝖈𝖔𝖓𝖘𝖕𝖎𝖗𝖆𝖈𝖞 𝖇𝖆𝖘𝖘",
         "verified": false,
         "visuals": {
             "enabled": true,
             "tracking": null,
-            "urn": "soundcloud:users:32210692",
+            "urn": "soundcloud:users:26551644",
             "visuals": [
                 {
                     "entry_time": 0,
-                    "urn": "soundcloud:visuals:180929631",
-                    "visual_url": "https://i1.sndcdn.com/visuals-000032210692-yNJkv5-original.jpg"
+                    "urn": "soundcloud:visuals:190787772",
+                    "visual_url": "https://i1.sndcdn.com/visuals-000026551644-VusY2j-original.jpg"
                 }
             ]
         }
     },
-    "user_id": 32210692,
+    "user_id": 26551644,
     "visuals": null,
-    "waveform_url": "https://wave.sndcdn.com/gPi2WBONN43u_m.json"
+    "waveform_url": "https://wave.sndcdn.com/UZCbjPcstrSA_m.json"
+},{
+    "artwork_url": "https://i1.sndcdn.com/artworks-000206616534-4ptrr0-large.jpg",
+    "caption": null,
+    "comment_count": 36,
+    "commentable": true,
+    "created_at": "2017-02-07T13:03:59Z",
+    "description": "Equal parts funk / soul. \n\nLuke Sipka of Bells n Robes on the organ.",
+    "display_date": "2017-02-07T13:03:59Z",
+    "download_count": 0,
+    "downloadable": false,
+    "duration": 202990,
+    "embeddable_by": "all",
+    "file_name": "A Love Like This.ogg",
+    "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\A Love Like This.ogg",
+    "full_duration": 202990,
+    "genre": "Hip-hop \u0026 Rap",
+    "has_downloads_left": false,
+    "id": 306535970,
+    "kind": "track",
+    "label_name": null,
+    "last_modified": "2019-03-30T18:06:49Z",
+    "license": "all-rights-reserved",
+    "likes_count": 3300,
+    "media": {
+        "transcodings": [
+            {
+                "duration": 202990,
+                "format": {
+                    "mime_type": "audio/mpeg",
+                    "protocol": "hls"
+                },
+                "preset": "mp3_0_0",
+                "quality": "sq",
+                "snipped": false,
+                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:306535970/274cf38d-2183-48af-ab12-d4919191518e/stream/hls"
+            },
+            {
+                "duration": 202990,
+                "format": {
+                    "mime_type": "audio/mpeg",
+                    "protocol": "progressive"
+                },
+                "preset": "mp3_0_0",
+                "quality": "sq",
+                "snipped": false,
+                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:306535970/274cf38d-2183-48af-ab12-d4919191518e/stream/progressive"
+            },
+            {
+                "duration": 202990,
+                "format": {
+                    "mime_type": "audio/ogg; codecs=\"opus\"",
+                    "protocol": "hls"
+                },
+                "preset": "opus_0_0",
+                "quality": "sq",
+                "snipped": false,
+                "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:306535970/8e66db7d-463d-455a-ae49-210ae7ec84d8/stream/hls"
+            }
+        ]
+    },
+    "monetization_model": "NOT_APPLICABLE",
+    "permalink": "a-love-like-this",
+    "permalink_url": "https://soundcloud.com/daily-bread/a-love-like-this",
+    "playback_count": 108452,
+    "policy": "ALLOW",
+    "public": true,
+    "publisher_metadata": {
+        "id": 306535970,
+        "urn": "soundcloud:tracks:306535970"
+    },
+    "purchase_title": "Free Download",
+    "purchase_url": "https://www.toneden.io/dailybread/post/a-love-like-this",
+    "release_date": null,
+    "reposts_count": 616,
+    "secret_token": null,
+    "sharing": "public",
+    "state": "finished",
+    "station_permalink": "track-stations:306535970",
+    "station_urn": "soundcloud:system-playlists:track-stations:306535970",
+    "streamable": true,
+    "tag_list": "funk soul \"Hip Hop\"",
+    "title": "A Love Like This",
+    "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjNiZGE0NzJlLTQ5NDgtNGU4NC1hMTMwLWZjYTE1NzY2M2JiMSIsImlhdCI6MTY4MjU3NTI4MH0.gCNkiSZBGlceXWWD_sAlpxtuN6y8Sf2CEXKMR_ka4Ew",
+    "track_format": "single-track",
+    "uri": "https://api.soundcloud.com/tracks/306535970",
+    "urn": "soundcloud:tracks:306535970",
+    "user": {
+        "avatar_url": "https://i1.sndcdn.com/avatars-000450772101-rguae9-large.jpg",
+        "badges": {
+            "pro": false,
+            "pro_unlimited": true,
+            "verified": false
+        },
+        "city": "ATLANTA",
+        "comments_count": 0,
+        "country_code": null,
+        "created_at": "2011-02-05T00:15:47Z",
+        "creator_subscription": {
+            "product": {
+                "id": "creator-pro-unlimited"
+            }
+        },
+        "creator_subscriptions": [
+            {
+                "product": {
+                    "id": "creator-pro-unlimited"
+                }
+            }
+        ],
+        "description": "Daily Bread is the sonic perception of Rhett Whatley. \n\nBooking:\nJay: jmoss@teamwass.com\nZach: zberkowitz@teamwass.com\nLogan: lhandelsman@teamwass.com\n\nManagement: \nWhit: whit@thehawksnestmusic.com\nAraya: araya@thehawksnestmusic.com\nAl: santana@repatlanta.com\n・・・・・・\nTwitter/Insta :\n@rhettwhatley\n@dailybreadmusic",
+        "first_name": "Rhett",
+        "followers_count": 28616,
+        "followings_count": 383,
+        "full_name": "Rhett Whatley",
+        "groups_count": 0,
+        "id": 3013993,
+        "kind": "user",
+        "last_modified": "2022-09-09T20:19:51Z",
+        "last_name": "Whatley",
+        "likes_count": 293,
+        "permalink": "daily-bread",
+        "permalink_url": "https://soundcloud.com/daily-bread",
+        "playlist_count": 9,
+        "playlist_likes_count": 19,
+        "reposts_count": null,
+        "station_permalink": "artist-stations:3013993",
+        "station_urn": "soundcloud:system-playlists:artist-stations:3013993",
+        "track_count": 31,
+        "uri": "https://api.soundcloud.com/users/3013993",
+        "urn": "soundcloud:users:3013993",
+        "username": "Daily Bread",
+        "verified": false,
+        "visuals": {
+            "enabled": true,
+            "tracking": null,
+            "urn": "soundcloud:users:3013993",
+            "visuals": [
+                {
+                    "entry_time": 0,
+                    "urn": "soundcloud:visuals:13088709",
+                    "visual_url": "https://i1.sndcdn.com/visuals-000003013993-QY7ptk-original.jpg"
+                }
+            ]
+        }
+    },
+    "user_id": 3013993,
+    "visuals": null,
+    "waveform_url": "https://wave.sndcdn.com/XPLRtU8L7Aig_m.json"
 }]

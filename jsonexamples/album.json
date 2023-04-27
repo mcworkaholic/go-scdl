@@ -1,0 +1,724 @@
+[{
+    "artwork_url": "https://i1.sndcdn.com/artworks-4cda28c2-e837-4252-acde-279f9a4d6b6c-0-large.jpg",
+    "created_at": "2018-09-28T01:50:31Z",
+    "description": null,
+    "display_date": "2018-09-28T00:00:00Z",
+    "duration": 1034188,
+    "embeddable_by": "all",
+    "genre": "Electronic",
+    "id": 612083631,
+    "is_album": true,
+    "kind": "playlist",
+    "label_name": null,
+    "last_modified": "2022-05-13T11:37:17Z",
+    "license": "all-rights-reserved",
+    "likes_count": 167,
+    "managed_by_feeds": true,
+    "permalink": "voices-from-space-1",
+    "permalink_url": "https://soundcloud.com/an-ten-nae/sets/voices-from-space-1",
+    "public": true,
+    "published_at": "2018-09-28T00:00:00Z",
+    "purchase_title": null,
+    "purchase_url": null,
+    "release_date": "2018-09-28T00:00:00Z",
+    "reposts_count": 24,
+    "secret_token": null,
+    "set_type": "album",
+    "sharing": "public",
+    "tag_list": "\"Drum'n'Bass / Jungle\"",
+    "title": "Voices from Space",
+    "track_count": 5,
+    "tracks": [
+        {
+            "artwork_url": "https://i1.sndcdn.com/artworks-HZjJIA4nWrPd-0-large.jpg",
+            "caption": null,
+            "comment_count": 2,
+            "commentable": true,
+            "created_at": "2018-08-31T23:20:25Z",
+            "description": null,
+            "display_date": "2018-09-28T00:00:00Z",
+            "download_count": 0,
+            "downloadable": false,
+            "duration": 214622,
+            "embeddable_by": "all",
+            "file_name": "We Transform Sound into Light.ogg",
+            "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\We Transform Sound into Light.ogg",
+            "full_duration": 214622,
+            "genre": "Electronic",
+            "has_downloads_left": false,
+            "id": 493520637,
+            "kind": "track",
+            "label_name": "Medicine",
+            "last_modified": "2022-05-13T11:37:45Z",
+            "license": "all-rights-reserved",
+            "likes_count": 123,
+            "media": {
+                "transcodings": [
+                    {
+                        "duration": 214622,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "hls"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520637/bf519370-27b0-4d53-8e0b-44afbbf503c8/stream/hls"
+                    },
+                    {
+                        "duration": 214622,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "progressive"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520637/bf519370-27b0-4d53-8e0b-44afbbf503c8/stream/progressive"
+                    },
+                    {
+                        "duration": 214595,
+                        "format": {
+                            "mime_type": "audio/ogg; codecs=\"opus\"",
+                            "protocol": "hls"
+                        },
+                        "preset": "opus_0_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520637/f1910297-6f61-403a-a92e-e1e0a305b72f/stream/hls"
+                    }
+                ]
+            },
+            "monetization_model": "AD_SUPPORTED",
+            "permalink": "we-transform-sound-into-light",
+            "permalink_url": "https://soundcloud.com/an-ten-nae/we-transform-sound-into-light",
+            "playback_count": 5348,
+            "policy": "MONETIZE",
+            "public": true,
+            "publisher_metadata": {
+                "album_title": "Voices from Space",
+                "artist": "An-ten-nae",
+                "c_line": "(C) 2018 Medicine",
+                "c_line_for_display": "© 2018 Medicine",
+                "contains_music": true,
+                "explicit": false,
+                "id": 493520637,
+                "isrc": "USBEB1810081",
+                "p_line": "(P) 2018 Medicine",
+                "p_line_for_display": "℗ 2018 Medicine",
+                "release_title": "We Transform Sound into Light",
+                "upc_or_ean": "0635133947016",
+                "urn": "soundcloud:tracks:493520637"
+            },
+            "purchase_title": null,
+            "purchase_url": null,
+            "release_date": "2018-09-28T00:00:00Z",
+            "reposts_count": 9,
+            "secret_token": null,
+            "sharing": "public",
+            "state": "finished",
+            "station_permalink": "track-stations:493520637",
+            "station_urn": "soundcloud:system-playlists:track-stations:493520637",
+            "streamable": true,
+            "tag_list": "\"Drum'n'Bass / Jungle\"",
+            "title": "We Transform Sound into Light",
+            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6ImVmNTAzYzk1LWNlMWUtNDMzMC04NGExLTUwOGIxNzU5OTZkNSIsImlhdCI6MTY4MjU3NTU3NX0.7MmZ5fCbWMnhxs-AICvIRn4v-QLYmp6EGO3ilX3YLx8",
+            "track_format": "single-track",
+            "uri": "https://api.soundcloud.com/tracks/493520637",
+            "urn": "soundcloud:tracks:493520637",
+            "user": {
+                "avatar_url": "https://i1.sndcdn.com/avatars-YYvQh6rKJJ9VnIGD-qoigBA-large.jpg",
+                "badges": {
+                    "pro": false,
+                    "pro_unlimited": true,
+                    "verified": true
+                },
+                "city": "Oakland",
+                "country_code": "US",
+                "first_name": "",
+                "followers_count": 55859,
+                "full_name": "",
+                "id": 109165,
+                "kind": "user",
+                "last_modified": "2022-11-11T19:09:41Z",
+                "last_name": "",
+                "permalink": "an-ten-nae",
+                "permalink_url": "https://soundcloud.com/an-ten-nae",
+                "station_permalink": "artist-stations:109165",
+                "station_urn": "soundcloud:system-playlists:artist-stations:109165",
+                "uri": "https://api.soundcloud.com/users/109165",
+                "urn": "soundcloud:users:109165",
+                "username": "an-ten-nae",
+                "verified": true
+            },
+            "user_id": 109165,
+            "visuals": null,
+            "waveform_url": "https://wave.sndcdn.com/rys20yUuWn0B_m.json"
+        },
+        {
+            "artwork_url": "https://i1.sndcdn.com/artworks-YkWHduVM7mvc-0-large.jpg",
+            "caption": null,
+            "comment_count": 1,
+            "commentable": true,
+            "created_at": "2018-08-31T23:20:02Z",
+            "description": null,
+            "display_date": "2018-09-28T00:00:00Z",
+            "download_count": 0,
+            "downloadable": false,
+            "duration": 215223,
+            "embeddable_by": "all",
+            "file_name": "Are We Human.ogg",
+            "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\Are We Human.ogg",
+            "full_duration": 215223,
+            "genre": "Electronic",
+            "has_downloads_left": false,
+            "id": 493520313,
+            "kind": "track",
+            "label_name": "Medicine",
+            "last_modified": "2022-05-13T11:06:53Z",
+            "license": "all-rights-reserved",
+            "likes_count": 115,
+            "media": {
+                "transcodings": [
+                    {
+                        "duration": 215223,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "hls"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520313/649db1e6-cf7c-4f7f-b53c-c395eb20f5aa/stream/hls"
+                    },
+                    {
+                        "duration": 215223,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "progressive"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520313/649db1e6-cf7c-4f7f-b53c-c395eb20f5aa/stream/progressive"
+                    },
+                    {
+                        "duration": 215179,
+                        "format": {
+                            "mime_type": "audio/ogg; codecs=\"opus\"",
+                            "protocol": "hls"
+                        },
+                        "preset": "opus_0_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520313/dbd59ae0-dc4a-477a-b10f-764c0b004002/stream/hls"
+                    }
+                ]
+            },
+            "monetization_model": "AD_SUPPORTED",
+            "permalink": "are-we-human",
+            "permalink_url": "https://soundcloud.com/an-ten-nae/are-we-human",
+            "playback_count": 4769,
+            "policy": "MONETIZE",
+            "public": true,
+            "publisher_metadata": {
+                "album_title": "Voices from Space",
+                "artist": "An-ten-nae",
+                "c_line": "(C) 2018 Medicine",
+                "c_line_for_display": "© 2018 Medicine",
+                "contains_music": true,
+                "explicit": false,
+                "id": 493520313,
+                "isrc": "USBEB1810082",
+                "p_line": "(P) 2018 Medicine",
+                "p_line_for_display": "℗ 2018 Medicine",
+                "release_title": "Are We Human",
+                "upc_or_ean": "0635133947016",
+                "urn": "soundcloud:tracks:493520313"
+            },
+            "purchase_title": null,
+            "purchase_url": null,
+            "release_date": "2018-09-28T00:00:00Z",
+            "reposts_count": 7,
+            "secret_token": null,
+            "sharing": "public",
+            "state": "finished",
+            "station_permalink": "track-stations:493520313",
+            "station_urn": "soundcloud:system-playlists:track-stations:493520313",
+            "streamable": true,
+            "tag_list": "\"Drum'n'Bass / Jungle\"",
+            "title": "Are We Human",
+            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjZlYTI3ZTMyLWMxZDMtNDk2OC1iZTE2LTQ1OGZiZjA1MDUzMSIsImlhdCI6MTY4MjU3NTU3NX0.yK11R09i3jk9e5YM_KTge8j1Ro7W-1B4hLnpCiL59I0",
+            "track_format": "single-track",
+            "uri": "https://api.soundcloud.com/tracks/493520313",
+            "urn": "soundcloud:tracks:493520313",
+            "user": {
+                "avatar_url": "https://i1.sndcdn.com/avatars-YYvQh6rKJJ9VnIGD-qoigBA-large.jpg",
+                "badges": {
+                    "pro": false,
+                    "pro_unlimited": true,
+                    "verified": true
+                },
+                "city": "Oakland",
+                "country_code": "US",
+                "first_name": "",
+                "followers_count": 55859,
+                "full_name": "",
+                "id": 109165,
+                "kind": "user",
+                "last_modified": "2022-11-11T19:09:41Z",
+                "last_name": "",
+                "permalink": "an-ten-nae",
+                "permalink_url": "https://soundcloud.com/an-ten-nae",
+                "station_permalink": "artist-stations:109165",
+                "station_urn": "soundcloud:system-playlists:artist-stations:109165",
+                "uri": "https://api.soundcloud.com/users/109165",
+                "urn": "soundcloud:users:109165",
+                "username": "an-ten-nae",
+                "verified": true
+            },
+            "user_id": 109165,
+            "visuals": null,
+            "waveform_url": "https://wave.sndcdn.com/EFWapoFD3ONg_m.json"
+        },
+        {
+            "artwork_url": "https://i1.sndcdn.com/artworks-jPklgmp2TlqH-0-large.jpg",
+            "caption": null,
+            "comment_count": 0,
+            "commentable": true,
+            "created_at": "2018-08-31T23:20:01Z",
+            "description": null,
+            "display_date": "2018-09-28T00:00:00Z",
+            "download_count": 0,
+            "downloadable": false,
+            "duration": 186384,
+            "embeddable_by": "all",
+            "file_name": "Cassiopeia.ogg",
+            "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\Cassiopeia.ogg",
+            "full_duration": 186384,
+            "genre": "Electronic",
+            "has_downloads_left": false,
+            "id": 493520295,
+            "kind": "track",
+            "label_name": "Medicine",
+            "last_modified": "2022-05-13T11:38:04Z",
+            "license": "all-rights-reserved",
+            "likes_count": 63,
+            "media": {
+                "transcodings": [
+                    {
+                        "duration": 186384,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "hls"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520295/eb24a6e6-5ffd-484a-bb00-ee197400016b/stream/hls"
+                    },
+                    {
+                        "duration": 186384,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "progressive"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520295/eb24a6e6-5ffd-484a-bb00-ee197400016b/stream/progressive"
+                    },
+                    {
+                        "duration": 186359,
+                        "format": {
+                            "mime_type": "audio/ogg; codecs=\"opus\"",
+                            "protocol": "hls"
+                        },
+                        "preset": "opus_0_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520295/d95a92e6-37cf-48f6-b48b-a2e8a3a08a4b/stream/hls"
+                    }
+                ]
+            },
+            "monetization_model": "AD_SUPPORTED",
+            "permalink": "cassiopeia-1",
+            "permalink_url": "https://soundcloud.com/an-ten-nae/cassiopeia-1",
+            "playback_count": 3692,
+            "policy": "MONETIZE",
+            "public": true,
+            "publisher_metadata": {
+                "album_title": "Voices from Space",
+                "artist": "An-ten-nae",
+                "c_line": "(C) 2018 Medicine",
+                "c_line_for_display": "© 2018 Medicine",
+                "contains_music": true,
+                "explicit": false,
+                "id": 493520295,
+                "isrc": "USBEB1810083",
+                "p_line": "(P) 2018 Medicine",
+                "p_line_for_display": "℗ 2018 Medicine",
+                "release_title": "Cassiopeia",
+                "upc_or_ean": "0635133947016",
+                "urn": "soundcloud:tracks:493520295"
+            },
+            "purchase_title": null,
+            "purchase_url": null,
+            "release_date": "2018-09-28T00:00:00Z",
+            "reposts_count": 4,
+            "secret_token": null,
+            "sharing": "public",
+            "state": "finished",
+            "station_permalink": "track-stations:493520295",
+            "station_urn": "soundcloud:system-playlists:track-stations:493520295",
+            "streamable": true,
+            "tag_list": "\"Drum'n'Bass / Jungle\"",
+            "title": "Cassiopeia",
+            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjE3MzI3N2E4LWFmOTMtNDM1ZS05OWMyLWE2OGE2MWY3NWNkYyIsImlhdCI6MTY4MjU3NTU3NX0.GWVXgj3qgdfk5efmu1hAzlfHTCKclQ1viNCLfd_xE90",
+            "track_format": "single-track",
+            "uri": "https://api.soundcloud.com/tracks/493520295",
+            "urn": "soundcloud:tracks:493520295",
+            "user": {
+                "avatar_url": "https://i1.sndcdn.com/avatars-YYvQh6rKJJ9VnIGD-qoigBA-large.jpg",
+                "badges": {
+                    "pro": false,
+                    "pro_unlimited": true,
+                    "verified": true
+                },
+                "city": "Oakland",
+                "country_code": "US",
+                "first_name": "",
+                "followers_count": 55859,
+                "full_name": "",
+                "id": 109165,
+                "kind": "user",
+                "last_modified": "2022-11-11T19:09:41Z",
+                "last_name": "",
+                "permalink": "an-ten-nae",
+                "permalink_url": "https://soundcloud.com/an-ten-nae",
+                "station_permalink": "artist-stations:109165",
+                "station_urn": "soundcloud:system-playlists:artist-stations:109165",
+                "uri": "https://api.soundcloud.com/users/109165",
+                "urn": "soundcloud:users:109165",
+                "username": "an-ten-nae",
+                "verified": true
+            },
+            "user_id": 109165,
+            "visuals": null,
+            "waveform_url": "https://wave.sndcdn.com/QdpqA7WnseTz_m.json"
+        },
+        {
+            "artwork_url": "https://i1.sndcdn.com/artworks-VL7ZTri5dyFo-0-large.jpg",
+            "caption": null,
+            "comment_count": 1,
+            "commentable": true,
+            "created_at": "2018-08-31T23:19:40Z",
+            "description": null,
+            "display_date": "2018-09-28T00:00:00Z",
+            "download_count": 0,
+            "downloadable": false,
+            "duration": 228754,
+            "embeddable_by": "all",
+            "file_name": "Racing Through a Black Hole.ogg",
+            "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\Racing Through a Black Hole.ogg",
+            "full_duration": 228754,
+            "genre": "Electronic",
+            "has_downloads_left": false,
+            "id": 493520019,
+            "kind": "track",
+            "label_name": "Medicine",
+            "last_modified": "2022-05-13T11:32:11Z",
+            "license": "all-rights-reserved",
+            "likes_count": 71,
+            "media": {
+                "transcodings": [
+                    {
+                        "duration": 228754,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "hls"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520019/2dffc8bb-bc17-41bd-8b3d-44ba5c0e2995/stream/hls"
+                    },
+                    {
+                        "duration": 228754,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "progressive"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520019/2dffc8bb-bc17-41bd-8b3d-44ba5c0e2995/stream/progressive"
+                    },
+                    {
+                        "duration": 228712,
+                        "format": {
+                            "mime_type": "audio/ogg; codecs=\"opus\"",
+                            "protocol": "hls"
+                        },
+                        "preset": "opus_0_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520019/ad503985-bab7-44af-8d4b-62225acb1d5a/stream/hls"
+                    }
+                ]
+            },
+            "monetization_model": "AD_SUPPORTED",
+            "permalink": "racing-through-a-black-hole",
+            "permalink_url": "https://soundcloud.com/an-ten-nae/racing-through-a-black-hole",
+            "playback_count": 3275,
+            "policy": "MONETIZE",
+            "public": true,
+            "publisher_metadata": {
+                "album_title": "Voices from Space",
+                "artist": "An-ten-nae",
+                "c_line": "(C) 2018 Medicine",
+                "c_line_for_display": "© 2018 Medicine",
+                "contains_music": true,
+                "explicit": false,
+                "id": 493520019,
+                "isrc": "USBEB1810084",
+                "p_line": "(P) 2018 Medicine",
+                "p_line_for_display": "℗ 2018 Medicine",
+                "release_title": "Racing Through a Black Hole",
+                "upc_or_ean": "0635133947016",
+                "urn": "soundcloud:tracks:493520019"
+            },
+            "purchase_title": null,
+            "purchase_url": null,
+            "release_date": "2018-09-28T00:00:00Z",
+            "reposts_count": 4,
+            "secret_token": null,
+            "sharing": "public",
+            "state": "finished",
+            "station_permalink": "track-stations:493520019",
+            "station_urn": "soundcloud:system-playlists:track-stations:493520019",
+            "streamable": true,
+            "tag_list": "\"Drum'n'Bass / Jungle\"",
+            "title": "Racing Through a Black Hole",
+            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjEyZGI4NjIzLWZiZTctNDk0NS04NjA5LTkzNGE5NTJkODE0OCIsImlhdCI6MTY4MjU3NTU3NX0.oCdY4obEoE6f1-qdMsgmDjPNkKQE-Mg5Nmcni__wRmo",
+            "track_format": "single-track",
+            "uri": "https://api.soundcloud.com/tracks/493520019",
+            "urn": "soundcloud:tracks:493520019",
+            "user": {
+                "avatar_url": "https://i1.sndcdn.com/avatars-YYvQh6rKJJ9VnIGD-qoigBA-large.jpg",
+                "badges": {
+                    "pro": false,
+                    "pro_unlimited": true,
+                    "verified": true
+                },
+                "city": "Oakland",
+                "country_code": "US",
+                "first_name": "",
+                "followers_count": 55859,
+                "full_name": "",
+                "id": 109165,
+                "kind": "user",
+                "last_modified": "2022-11-11T19:09:41Z",
+                "last_name": "",
+                "permalink": "an-ten-nae",
+                "permalink_url": "https://soundcloud.com/an-ten-nae",
+                "station_permalink": "artist-stations:109165",
+                "station_urn": "soundcloud:system-playlists:artist-stations:109165",
+                "uri": "https://api.soundcloud.com/users/109165",
+                "urn": "soundcloud:users:109165",
+                "username": "an-ten-nae",
+                "verified": true
+            },
+            "user_id": 109165,
+            "visuals": null,
+            "waveform_url": "https://wave.sndcdn.com/T84TdnrRXjoh_m.json"
+        },
+        {
+            "artwork_url": "https://i1.sndcdn.com/artworks-T9tcukAm5fX7-0-large.jpg",
+            "caption": null,
+            "comment_count": 2,
+            "commentable": true,
+            "created_at": "2018-08-31T23:20:07Z",
+            "description": null,
+            "display_date": "2018-09-28T00:00:00Z",
+            "download_count": 0,
+            "downloadable": false,
+            "duration": 189205,
+            "embeddable_by": "all",
+            "file_name": "Grinding Oblivion.ogg",
+            "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\Grinding Oblivion.ogg",
+            "full_duration": 189205,
+            "genre": "Electronic",
+            "has_downloads_left": false,
+            "id": 493520385,
+            "kind": "track",
+            "label_name": "Medicine",
+            "last_modified": "2022-05-13T11:36:01Z",
+            "license": "all-rights-reserved",
+            "likes_count": 55,
+            "media": {
+                "transcodings": [
+                    {
+                        "duration": 189205,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "hls"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520385/10a7ce98-c5fc-4855-a465-53ee3ffc7708/stream/hls"
+                    },
+                    {
+                        "duration": 189205,
+                        "format": {
+                            "mime_type": "audio/mpeg",
+                            "protocol": "progressive"
+                        },
+                        "preset": "mp3_1_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520385/10a7ce98-c5fc-4855-a465-53ee3ffc7708/stream/progressive"
+                    },
+                    {
+                        "duration": 189183,
+                        "format": {
+                            "mime_type": "audio/ogg; codecs=\"opus\"",
+                            "protocol": "hls"
+                        },
+                        "preset": "opus_0_0",
+                        "quality": "sq",
+                        "snipped": false,
+                        "url": "https://api-widget.soundcloud.com/media/soundcloud:tracks:493520385/795e18c9-a304-4cef-ac16-dc875f519bda/stream/hls"
+                    }
+                ]
+            },
+            "monetization_model": "AD_SUPPORTED",
+            "permalink": "grinding-oblivion",
+            "permalink_url": "https://soundcloud.com/an-ten-nae/grinding-oblivion",
+            "playback_count": 3212,
+            "policy": "MONETIZE",
+            "public": true,
+            "publisher_metadata": {
+                "album_title": "Voices from Space",
+                "artist": "An-ten-nae",
+                "c_line": "(C) 2018 Medicine",
+                "c_line_for_display": "© 2018 Medicine",
+                "contains_music": true,
+                "explicit": false,
+                "id": 493520385,
+                "isrc": "USBEB1810085",
+                "p_line": "(P) 2018 Medicine",
+                "p_line_for_display": "℗ 2018 Medicine",
+                "release_title": "Grinding Oblivion",
+                "upc_or_ean": "0635133947016",
+                "urn": "soundcloud:tracks:493520385"
+            },
+            "purchase_title": null,
+            "purchase_url": null,
+            "release_date": "2018-09-28T00:00:00Z",
+            "reposts_count": 5,
+            "secret_token": null,
+            "sharing": "public",
+            "state": "finished",
+            "station_permalink": "track-stations:493520385",
+            "station_urn": "soundcloud:system-playlists:track-stations:493520385",
+            "streamable": true,
+            "tag_list": "\"Drum'n'Bass / Jungle\"",
+            "title": "Grinding Oblivion",
+            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjYxYzYzYTliLWZlODEtNDI5MS1hMjMyLTA0YmQ1NTJmMmUwMiIsImlhdCI6MTY4MjU3NTU3NX0.JNDc7Hp9CC0f087oRYR-Rkxpc781gtJAyIDJeIyzgmo",
+            "track_format": "single-track",
+            "uri": "https://api.soundcloud.com/tracks/493520385",
+            "urn": "soundcloud:tracks:493520385",
+            "user": {
+                "avatar_url": "https://i1.sndcdn.com/avatars-YYvQh6rKJJ9VnIGD-qoigBA-large.jpg",
+                "badges": {
+                    "pro": false,
+                    "pro_unlimited": true,
+                    "verified": true
+                },
+                "city": "Oakland",
+                "country_code": "US",
+                "first_name": "",
+                "followers_count": 55859,
+                "full_name": "",
+                "id": 109165,
+                "kind": "user",
+                "last_modified": "2022-11-11T19:09:41Z",
+                "last_name": "",
+                "permalink": "an-ten-nae",
+                "permalink_url": "https://soundcloud.com/an-ten-nae",
+                "station_permalink": "artist-stations:109165",
+                "station_urn": "soundcloud:system-playlists:artist-stations:109165",
+                "uri": "https://api.soundcloud.com/users/109165",
+                "urn": "soundcloud:users:109165",
+                "username": "an-ten-nae",
+                "verified": true
+            },
+            "user_id": 109165,
+            "visuals": null,
+            "waveform_url": "https://wave.sndcdn.com/l9tGFAQzLbVY_m.json"
+        }
+    ],
+    "uri": "https://api.soundcloud.com/playlists/612083631",
+    "user": {
+        "avatar_url": "https://i1.sndcdn.com/avatars-YYvQh6rKJJ9VnIGD-qoigBA-large.jpg",
+        "badges": {
+            "pro": false,
+            "pro_unlimited": true,
+            "verified": true
+        },
+        "city": "Oakland",
+        "comments_count": 0,
+        "country_code": "US",
+        "created_at": "2009-04-28T21:56:29Z",
+        "creator_subscription": {
+            "product": {
+                "id": "creator-pro-unlimited"
+            }
+        },
+        "creator_subscriptions": [
+            {
+                "product": {
+                    "id": "creator-pro-unlimited"
+                }
+            }
+        ],
+        "description": "I make beats --    An-ten-nae - Dimond saints - DnA - The Invisible People \nBooking - info@an-ten-nae.net",
+        "first_name": "",
+        "followers_count": 55859,
+        "followings_count": 1822,
+        "full_name": "",
+        "groups_count": 0,
+        "id": 109165,
+        "kind": "user",
+        "last_modified": "2022-11-11T19:09:41Z",
+        "last_name": "",
+        "likes_count": 141,
+        "permalink": "an-ten-nae",
+        "permalink_url": "https://soundcloud.com/an-ten-nae",
+        "playlist_count": 17,
+        "playlist_likes_count": 7,
+        "reposts_count": null,
+        "station_permalink": "artist-stations:109165",
+        "station_urn": "soundcloud:system-playlists:artist-stations:109165",
+        "track_count": 168,
+        "uri": "https://api.soundcloud.com/users/109165",
+        "urn": "soundcloud:users:109165",
+        "username": "an-ten-nae",
+        "verified": true,
+        "visuals": {
+            "enabled": true,
+            "tracking": null,
+            "urn": "soundcloud:users:109165",
+            "visuals": [
+                {
+                    "entry_time": 0,
+                    "urn": "soundcloud:visuals:179266644",
+                    "visual_url": "https://i1.sndcdn.com/visuals-000000109165-OzXFrh-original.jpg"
+                }
+            ]
+        }
+    },
+    "user_id": 109165
+}]

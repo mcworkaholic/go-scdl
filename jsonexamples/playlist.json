@@ -1,4 +1,4 @@
-{
+[{
     "artwork_url": null,
     "created_at": "2020-07-08T01:13:04Z",
     "description": null,
@@ -41,6 +41,8 @@
             "downloadable": false,
             "duration": 2291570,
             "embeddable_by": "all",
+            "file_name": "Modalities Vol. 3 (All Original Mix).ogg",
+            "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\Modalities Vol. 3 (All Original Mix).ogg",
             "full_duration": 2291570,
             "genre": "Hip-Hop Bass Music",
             "has_downloads_left": false,
@@ -49,7 +51,7 @@
             "label_name": null,
             "last_modified": "2022-03-12T06:35:21Z",
             "license": "all-rights-reserved",
-            "likes_count": 1467,
+            "likes_count": 1468,
             "media": {
                 "transcodings": [
                     {
@@ -90,7 +92,7 @@
             "monetization_model": "NOT_APPLICABLE",
             "permalink": "modalities-vol-3",
             "permalink_url": "https://soundcloud.com/thought_process_music/modalities-vol-3",
-            "playback_count": 22061,
+            "playback_count": 22073,
             "policy": "ALLOW",
             "public": true,
             "publisher_metadata": {
@@ -110,7 +112,7 @@
             "streamable": true,
             "tag_list": "Experimental Breaks Beats Bass Hip-Hop",
             "title": "Modalities Vol. 3 (All Original Mix)",
-            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6ImEwZjAwYzBhLWM5ZDUtNGU4OC04MDQxLTlhNzhlNTBhYmU2NyIsImlhdCI6MTY4MjUxNTEyOX0.lcAi5Rz-rBzr10jY5bXn9qEz2QpjWmjwerth0P1U3Ww",
+            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6ImEwZjAwYzBhLWM5ZDUtNGU4OC04MDQxLTlhNzhlNTBhYmU2NyIsImlhdCI6MTY4MjU3NTQxNH0.9vFUkuVRlU_Ffi_uaobPVloKvJWDBrKfE4Uj5E4UhaA",
             "track_format": "single-track",
             "uri": "https://api.soundcloud.com/tracks/671615774",
             "urn": "soundcloud:tracks:671615774",
@@ -124,7 +126,7 @@
                 "city": "Denver",
                 "country_code": "US",
                 "first_name": "Joseph",
-                "followers_count": 10179,
+                "followers_count": 10185,
                 "full_name": "Joseph Rich",
                 "id": 32210692,
                 "kind": "user",
@@ -155,6 +157,8 @@
             "downloadable": true,
             "duration": 5530901,
             "embeddable_by": "all",
+            "file_name": "~ after hours ~.ogg",
+            "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\~ after hours ~.ogg",
             "full_duration": 5530901,
             "genre": "Downtempo",
             "has_downloads_left": true,
@@ -163,7 +167,7 @@
             "label_name": null,
             "last_modified": "2022-02-24T02:24:21Z",
             "license": "all-rights-reserved",
-            "likes_count": 1924,
+            "likes_count": 1926,
             "media": {
                 "transcodings": [
                     {
@@ -204,7 +208,7 @@
             "monetization_model": "NOT_APPLICABLE",
             "permalink": "after-hours",
             "permalink_url": "https://soundcloud.com/brotherbearboi/after-hours",
-            "playback_count": 34289,
+            "playback_count": 34312,
             "policy": "ALLOW",
             "public": true,
             "publisher_metadata": {
@@ -224,7 +228,7 @@
             "streamable": true,
             "tag_list": "chill \"ambient dub\" atmospheric Relax tasty after hours \"chill out\" \"deep dub\" \"chill dub\" \"atmospheric dub\" \"brother bear\" Downtempo \"ambient \" tipper \"sit back\" enjoy",
             "title": "~ after hours ~",
-            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjJlM2EyMjU5LWJkMDUtNGFmOC1hZTQ3LTc5Yjk1NjRkMTdlNyIsImlhdCI6MTY4MjUxNTEyOX0._modSnmkFLnXZ92oYXdQ8GJbusOLk6NA62a82G5ajkc",
+            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjJlM2EyMjU5LWJkMDUtNGFmOC1hZTQ3LTc5Yjk1NjRkMTdlNyIsImlhdCI6MTY4MjU3NTQxNH0.HU3oXGhrDhsJvP4v5vj8lr9dWelL_WHr6sVjb2cYKlo",
             "track_format": "single-track",
             "uri": "https://api.soundcloud.com/tracks/595921629",
             "urn": "soundcloud:tracks:595921629",
@@ -238,7 +242,7 @@
                 "city": "St. Pete, FL",
                 "country_code": null,
                 "first_name": "Josh",
-                "followers_count": 2367,
+                "followers_count": 2368,
                 "full_name": "Josh",
                 "id": 20191070,
                 "kind": "user",
@@ -269,6 +273,8 @@
             "downloadable": false,
             "duration": 3814235,
             "embeddable_by": "all",
+            "file_name": "Old Greggs Clockwork Experience VOL 1 (1K Followers Release).ogg",
+            "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\Old Greggs Clockwork Experience VOL 1 (1K Followers Release).ogg",
             "full_duration": 3814235,
             "genre": "Bass Music",
             "has_downloads_left": false,
@@ -318,7 +324,7 @@
             "monetization_model": "NOT_APPLICABLE",
             "permalink": "old-greggs-clockwork-experience-vol-1-1k-followers-release",
             "permalink_url": "https://soundcloud.com/oldgreggmusic/old-greggs-clockwork-experience-vol-1-1k-followers-release",
-            "playback_count": 24801,
+            "playback_count": 24802,
             "policy": "ALLOW",
             "public": true,
             "publisher_metadata": {
@@ -340,7 +346,7 @@
             "streamable": true,
             "tag_list": "",
             "title": "Old Greggs Clockwork Experience VOL 1 (1K Followers Release)",
-            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjVmMTViNjBlLWE4MDYtNDAzMC05OGE2LTUzMmM0OGRmYTJhZCIsImlhdCI6MTY4MjUxNTEyOX0.sUNDH3BXzrO9ChX89xV6B1TojHRvHKbkxRVfEgbCits",
+            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjVmMTViNjBlLWE4MDYtNDAzMC05OGE2LTUzMmM0OGRmYTJhZCIsImlhdCI6MTY4MjU3NTQxNH0.Ht5H7-zTFbUqAMLbESyn1WwVo_TznIvJIbjfOMW52HI",
             "track_format": "single-track",
             "uri": "https://api.soundcloud.com/tracks/618532551",
             "urn": "soundcloud:tracks:618532551",
@@ -354,7 +360,7 @@
                 "city": "Colorado",
                 "country_code": null,
                 "first_name": "",
-                "followers_count": 4168,
+                "followers_count": 4169,
                 "full_name": "",
                 "id": 134604348,
                 "kind": "user",
@@ -385,6 +391,8 @@
             "downloadable": false,
             "duration": 3194279,
             "embeddable_by": "all",
+            "file_name": "Old Greggs Clockwork Experience VOL 2 (2K Followers Release).ogg",
+            "file_path": "C:\\Users\\Weston\\Desktop\\go-scdl\\Old Greggs Clockwork Experience VOL 2 (2K Followers Release).ogg",
             "full_duration": 3194279,
             "genre": "",
             "has_downloads_left": false,
@@ -434,7 +442,7 @@
             "monetization_model": "NOT_APPLICABLE",
             "permalink": "old-greggs-clockwork-experience-vol-2-2k-followers-release",
             "permalink_url": "https://soundcloud.com/oldgreggmusic/old-greggs-clockwork-experience-vol-2-2k-followers-release",
-            "playback_count": 19703,
+            "playback_count": 19712,
             "policy": "ALLOW",
             "public": true,
             "publisher_metadata": {
@@ -454,7 +462,7 @@
             "streamable": true,
             "tag_list": "",
             "title": "Old Greggs Clockwork Experience VOL 2 (2K Followers Release)",
-            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjBjNzNjNjc1LTlmYTYtNDMzYS05MDJkLWZkM2I4OWQwZmEyMyIsImlhdCI6MTY4MjUxNTEyOX0.6W2Exd2sCs782g3P179hJGd90nzxt8pdZ8Ur_XU9PIk",
+            "track_authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW8iOiJVUyIsInN1YiI6IiIsInJpZCI6IjBjNzNjNjc1LTlmYTYtNDMzYS05MDJkLWZkM2I4OWQwZmEyMyIsImlhdCI6MTY4MjU3NTQxNH0.Xdn_E3Ye_ffmzch2FalGV0B_8Sf8SJ9DF1gfzofNGE4",
             "track_format": "single-track",
             "uri": "https://api.soundcloud.com/tracks/797589484",
             "urn": "soundcloud:tracks:797589484",
@@ -468,7 +476,7 @@
                 "city": "Colorado",
                 "country_code": null,
                 "first_name": "",
-                "followers_count": 4168,
+                "followers_count": 4169,
                 "full_name": "",
                 "id": 134604348,
                 "kind": "user",
@@ -594,7 +602,7 @@
         "kind": "user",
         "last_modified": "2020-07-08T01:14:35Z",
         "last_name": "",
-        "likes_count": 235,
+        "likes_count": 236,
         "permalink": "user-46670853",
         "permalink_url": "https://soundcloud.com/user-46670853",
         "playlist_count": 2,
@@ -610,4 +618,4 @@
         "visuals": null
     },
     "user_id": 849674908
-}
+}]
