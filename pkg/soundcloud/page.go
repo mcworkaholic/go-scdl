@@ -21,10 +21,10 @@ import (
 
 var Sound *SoundData
 
-func SaveResponse(filePath string, apiUrl string, i int) {
+func SaveResponse(filePath string, apiUrl string, i int) *SoundData {
 	resp, err := http.Get(apiUrl)
 	if err != nil {
-		panic(err)
+		return nil
 	}
 
 	defer resp.Body.Close()
@@ -65,7 +65,6 @@ func SaveResponse(filePath string, apiUrl string, i int) {
 				}
 			}
 		} else {
-			// WE DO NOT NEED Songtitle variable
 			// Check if the "tracks" key does not exist and "kind" is not set to "playlist"
 			if _, tracksExist := resultMap["tracks"]; !tracksExist && resultMap["kind"].(string) != "playlist" {
 				// Set the file path, name, artist attrs of the JSON file
@@ -83,6 +82,17 @@ func SaveResponse(filePath string, apiUrl string, i int) {
 		}
 		WriteJSON(formattedJson, i)
 	}
+	// Unmarshal the JSON response into a SoundData struct
+	var soundData SoundData
+	err = json.Unmarshal(body, &soundData)
+	if err != nil {
+		panic(err)
+	}
+	t500 := "t500x500" // for getting a higher res img
+	if soundData.ArtworkUrl != "" {
+		soundData.ArtworkUrl = strings.Replace(soundData.ArtworkUrl, "large", t500, 1)
+	}
+	return &soundData
 }
 
 func WriteJSON(resp []byte, i int) {
@@ -140,35 +150,10 @@ func GetSoundMetaData(filePath string, apiUrl string) *SoundData {
 	if err != nil {
 		panic(err)
 	}
-
-	// Set the file path, name, artist attrs of the JSON file
-	soundData.Filepath = filepath.FromSlash(path.Join(filePath, soundData.Title+".ogg"))
-	soundData.Filename = soundData.Title + ".ogg"
 	t500 := "t500x500" // for getting a higher res img
 	if soundData.ArtworkUrl != "" {
 		soundData.ArtworkUrl = strings.Replace(soundData.ArtworkUrl, "large", t500, 1)
 	}
-	permaUrl := soundData.PermalinkUrl
-	// Find the index of the last "/" and the second to last "/"
-	lastSlashIndex := strings.LastIndex(permaUrl, "/")
-	secondToLastSlashIndex := strings.LastIndex(permaUrl[:lastSlashIndex], "/")
-
-	// Extract the text between the slashes
-	textBetweenSlashes := permaUrl[secondToLastSlashIndex+1 : lastSlashIndex]
-
-	// Replace any "_" or "-" characters with spaces
-	cleanedText := strings.ReplaceAll(textBetweenSlashes, "_", " ")
-	cleanedText = strings.ReplaceAll(cleanedText, "-", " ")
-
-	// Split the cleaned text into words and capitalize each one
-	words := strings.Split(cleanedText, " ")
-	for i, word := range words {
-		words[i] = strings.Title(word)
-	}
-
-	// Join the words back into a single string
-	formattedUsername := strings.Join(words, " ")
-	soundData.Username = formattedUsername
 
 	return &soundData
 }
