@@ -31,7 +31,7 @@ def create_thumbnail_from_url(url):
     return img_bytes.getvalue()
 
 # Load the JSON file
-with open(".\\json\\download_cache.json", 'r') as f:
+with open(".\\json\\download-cache.json", 'r') as f:
     data = json.load(f)
     for obj in data:
         # load URL from JSON file
