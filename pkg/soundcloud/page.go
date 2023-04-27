@@ -135,28 +135,6 @@ func CloseJSON() {
 	}
 }
 
-// extract some meta data under : window.__sc_hydration
-// write to JSON file
-// check if the track exists and open to public
-func GetSoundMetaData(filePath string, apiUrl string) *SoundData {
-	statusCode, body, err := client.Get(apiUrl)
-	if err != nil || statusCode != http.StatusOK {
-		return nil
-	}
-
-	// Unmarshal the JSON response into a SoundData struct
-	var soundData SoundData
-	err = json.Unmarshal(body, &soundData)
-	if err != nil {
-		panic(err)
-	}
-	t500 := "t500x500" // for getting a higher res img
-	if soundData.ArtworkUrl != "" {
-		soundData.ArtworkUrl = strings.Replace(soundData.ArtworkUrl, "large", t500, 1)
-	}
-
-	return &soundData
-}
 func GetClientId(url string) string {
 
 	if url == "" {
