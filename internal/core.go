@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	defaultQuality = "low"
+	defaultQuality = "high"
 	soundData      = &soundcloud.SoundData{}
 	SearchLimit    = 6 // FIXME: hard-coded search limit
 	offset         = 0

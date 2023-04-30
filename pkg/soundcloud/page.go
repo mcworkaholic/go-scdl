@@ -39,6 +39,7 @@ func SaveResponse(filePath string, apiUrl string, i int) *SoundData {
 	if err != nil {
 		panic(err)
 	}
+
 	// Convert the map to an interface{}
 	resultIfc := interface{}(result)
 
@@ -58,6 +59,12 @@ func SaveResponse(filePath string, apiUrl string, i int) *SoundData {
 							filepath := filepath.FromSlash(path.Join(filePath, title+".ogg"))
 							filename := title + ".ogg"
 							// Add the extra fields to the track object
+
+							t500 := "t500x500" // for getting a higher res img
+							if track["artwork_url"] != "" {
+								track["artwork_url"] = strings.Replace(track["artwork_url"].(string), "large", t500, 1)
+							}
+
 							track["file_path"] = filepath
 							track["file_name"] = filename
 						}
