@@ -78,6 +78,11 @@ func SaveResponse(filePath string, apiUrl string, i int) *SoundData {
 				filepath := filepath.FromSlash(path.Join(filePath, resultMap["title"].(string)+".ogg"))
 				filename := resultMap["title"].(string) + ".ogg"
 				// Add the extra fields to the result object
+
+				t500 := "t500x500" // for getting a higher res img
+				if resultMap["artwork_url"] != "" {
+					resultMap["artwork_url"] = strings.Replace(resultMap["artwork_url"].(string), "large", t500, 1)
+				}
 				resultMap["file_path"] = filepath
 				resultMap["file_name"] = filename
 			}
