@@ -103,6 +103,12 @@ func SaveResponse(filePath string, apiUrl string, i int) *SoundData {
 }
 
 func WriteJSON(resp []byte, i int) {
+	// Delete the file if it exists
+	err := os.Remove(path.Join(".\\json", "download-cache.json"))
+	if err != nil && !os.IsNotExist(err) {
+		panic(err)
+	}
+
 	// Create or open the file for appending
 	file, err := os.OpenFile(path.Join(".\\json", "download-cache.json"), os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
