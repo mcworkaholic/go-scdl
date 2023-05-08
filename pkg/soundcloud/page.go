@@ -106,11 +106,25 @@ func SaveResponse(filePath string, apiUrl string, i int) *SoundData {
 	}
 	return &soundData
 }
+func getExecutableDir() string {
+	exe, err := os.Executable()
+	if err != nil {
+		panic(err)
+	}
+	exeDir := filepath.Dir(exe)
+	return exeDir
+}
+
+func getJSONFilePath() string {
+	exeDir := getExecutableDir()
+	filePath := filepath.Join(exeDir, "..", "json", "download-cache.json")
+	return filePath
+}
 
 func WriteJSON(resp []byte, i int) {
 	// Delete the file if it exists
-	filePath := filepath.Join("..", "json", "download-cache.json")
-	err := os.Remove(filepath.Join("..", "json", "download-cache.json"))
+	filePath := getJSONFilePath()
+	err := os.Remove(filePath)
 	if err != nil && !os.IsNotExist(err) {
 		panic(err)
 	}
@@ -144,7 +158,7 @@ func WriteJSON(resp []byte, i int) {
 
 func CloseJSON() {
 	// Create or open the file for appending
-	filePath := filepath.Join("..", "json", "download-cache.json")
+	filePath := getJSONFilePath()
 	file, err := os.OpenFile(filePath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		panic(err)
