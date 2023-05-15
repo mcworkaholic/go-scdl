@@ -117,7 +117,7 @@ func getExecutableDir() string {
 
 func getJSONFilePath() string {
 	exeDir := getExecutableDir()
-	filePath := filepath.Join(exeDir, "json", "download-cache.json")
+	filePath := filepath.Join(exeDir, "..", "json", "download-cache.json")
 	return filePath
 }
 
